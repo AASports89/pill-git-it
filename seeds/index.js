@@ -3,6 +3,7 @@
     const User = require("../models/User");
 
     const userData = require("./user-seeds.json");
+    const seedData = require('./data-seeds.json');
 
 
 //CREATE TABLES & SEED FOR TESTING//
