@@ -1,9 +1,9 @@
-# **project-2** [![License: ISC](https://img.shields.io/badge/License-ISC-blue.svg)](#isc-license)
+# **Pill Git It** [![License: ISC](https://img.shields.io/badge/License-ISC-blue.svg)](#isc-license)
 ---
 
 ## Overview
 ---
-**'project-2'** is a webpage application powered by dynamic JavaScript via a "back-end" structure utilizing ```Express.js API``` with a dependency on ```Express-Handlebars```, ```Dotenv```, ```MySQL```, ```Sequelize``` and ```JAWS_DB``` all combined with dynamic ```HTML``` as the "front-end" structure, using ```Heroku CLI``` to run the databse.
+**'Pill Git It'** is a webpage application powered by dynamic JavaScript via a "back-end" structure utilizing ```Express.js API``` with a dependency on ```Express-Handlebars```, ```Dotenv```, ```MySQL```, ```Sequelize``` and ```JAWS_DB``` all combined with dynamic ```HTML``` as the "front-end" structure, using ```Heroku CLI``` to run the databse.
 
 ## Table of Contents
 ---
@@ -28,14 +28,14 @@ INSERT USER STORY HERE
 
 ## Acceptance Criteria
 ---
-> **Note:** The following criteria is used to determine if the standards set for **'project-2'** have been met:
+> **Note:** The following criteria is used to determine if the standards set for **'Pill Git It'** have been met:
 
 ```md
 INSERT APPLICATION CRITERIA HERE
 ```
 ## Installation
 ----
-> **Important:** Once, the source code has been cloned from the repository @https://github.com/:
+> **Important:** Once, the source code has been cloned from the repository @https://github.com/AASports89/pill-git-it:
 
  Enter the following:
 
@@ -86,23 +86,23 @@ https://heroku.com
 ## GitHUB Repository
 ---
 
-https://github.com/
+https://github.com/AASports89/pill-git-it
 
 ## Evaluation Guideline
 ---
 
-> **Note**: The following evaluation guideline is used to determine if **'project-2'** meets the requirements for a minimum viable product:
+> **Note**: The following evaluation guideline is used to determine if ***'Pill Git It'** meets the requirements for a minimum viable product:
 ```
 INSERT EVALUATION GUIDELINE HERE
 ```
 
 ## Questions
 ---
-> **Note:** For any troubleshooting and/or functionality related questions, please visit my GitHUB @https://github.com/.
+> **Note:** For any troubleshooting and/or functionality related questions, please visit my GitHUB @https://github.com/AASports89.
 
 ## **ISC License**
 ---
-**Copyright © 2022 - Team™ 🤖**
+**Copyright © 2022 - ChillPillz™ 💊**
 
 Permission to use, copy, modify, and/or distribute this software for any purpose with or without fee is hereby granted, provided that the above copyright notice and this permission notice appear in all copies.
 
