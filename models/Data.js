@@ -1,34 +1,34 @@
-// module.exports = function(sequelize, DataTypes) {
+//IMPORT//
+  const { Model, DataTypes } = require("sequelize");
+  const bcrypt = require("bcrypt");
+  const sequelize = require("../config/connection");
+  const { Data } = require("./Data");
 
-//TODO: --INSERT CODE HERE-->
-const { Model, DataTypes } = require("sequelize");
-const bcrypt = require("bcrypt");
-const sequelize = require("../config/connection");
+  class Data extends Model{}
 
-class User extends Model{}
-Temp2.init({
-  id: {
+  Data.init({
+    id: {
     type: DataTypes.INTEGER,
     allowNull: false,
     primaryKey: true,
     autoIncrement: true,
   },
-  name: {
+    name: {
     type: DataTypes.STRING,
     allowNull: false,
   },
-  description: {
+    description: {
     type: DataTypes.STRING,
   },
-  date_created: {
+    date_created: {
     type: DataTypes.DATE,
     allowNull: false,
     defaultValue: DataTypes.NOW,
   },
-  user_id: {
+    user_id: {
     type: DataTypes.INTEGER,
     references: {
-      model: 'user',
+      model: 'post',
       key: 'id',
     },
   },
@@ -38,8 +38,8 @@ Temp2.init({
     timestamps: false,
     freezeTableName: true,
     underscored: true,
-    modelName: 'temp2',
+    modelName: 'data',
   }
 );
 
-module.exports = Temp2;
+module.exports = Data;
