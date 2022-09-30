@@ -1,41 +1,33 @@
-//DEPENDENCIES//
-  var fs = require("fs");
-  var path = require("path");
-  var Sequelize = require("sequelize");
-  var basename = path.basename(module.filename);
-  var env = process.env.NODE_ENV || "development";
-  var config = require(__dirname + "/../config/config.json")[env];
-  var db = {};
-//DATABASE REDIRECT --> HEROKU//
-    if (config.use_env_variable) {
-      var sequelize = new Sequelize(process.env[config.use_env_variable]);
-      } else {
-      var sequelize = new Sequelize(
-      config.database,
-      config.username,
-      config.password,
-      config
-    );
-  }
+// // IMPORT//
+// const User = require("./User");
+// const Post = require("./Post");
+// const Comment = require("./Comment");
 
-    fs.readdirSync(__dirname)
-      .filter(function(file) {
-      return (
-      file.indexOf(".") !== 0 && file !== basename && file.slice(-3) === ".js"
-    );
-    })
-      .forEach(function(file) {
-      var model = sequelize.import(path.join(__dirname, file));
-      db[model.name] = model;
-    });
-//KEYS --> DB//
-  Object.keys(db).forEach(function(modelName) {
-    if (db[modelName].associate) {
-      db[modelName].associate(db);
-    }
-  });
+// Post.belongsTo(User, {
+//     foreignKey: "author_id",
+// });
 
-  db.sequelize = sequelize;
-  db.Sequelize = Sequelize;
+// User.hasMany(Post, {
+// foreignKey: "author_id",
+// onDelete: "CASCADE",
+// });
 
-  module.exports = db;
+// Comment.belongsTo(Post, {
+//     foreignKey: "post_id",
+// });
+
+// Post.hasMany(Comment, {
+//     foreignKey: "post_id",
+//     onDelete: "CASCADE",
+// });
+
+// Comment.belongsTo(User, {
+//     foreignKey: "author_id",
+// });
+
+// User.hasMany(Comment, {
+//     foreignKey: "author_id",
+//     onDelete: "CASCADE",
+// });
+
+// module.exports = {User, Post, Comment};

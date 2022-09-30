@@ -1,40 +1,40 @@
-//DEPENDENCIES//
-  var express = require("express");
-  var exphbs = require("express-handlebars");
+const path = require('path');
+const express = require('express');
+const session = require('express-session');
+const exphbs = require('express-handlebars');
+const SequelizeStore = require('connect-session-sequelize')(session.Store);
 
-  var db = require("./models");
+// const routes = require('./controllers');
+const sequelize = require('./config/connection');
+const helpers = require('./utils/helpers');
 
-  var app = express();
-  var PORT = process.env.PORT || 3001;
+const app = express();
+const PORT = process.env.PORT || 3001;
 
-//MIDDLEWARE//
-  app.use(express.urlencoded({ extended: false }));
-  app.use(express.json());
-  app.use(express.static("public"));
+const sess = {
+  secret: 'Super secret secret',
+  cookie: {},
+  resave: false,
+  saveUninitialized: true,
+  store: new SequelizeStore({
+    db: sequelize,
+  }),
+};
 
-//HANDLEBARS//
-  app.engine(
-    "handlebars",
-    exphbs({
-      defaultLayout: "main"
-    })
-  );
-  app.set("view engine", "handlebars");
+app.use(session(sess));
 
-//ROUTES//
-  require("./routes/htmlRoutes")(app);
+const hbs = exphbs.create({ helpers });
 
-  var syncOptions = { force: false };
+app.engine('handlebars', hbs.engine);
+app.set('view engine', 'handlebars');
 
-//IF RUNNING A TEST --> SET SYNCOPTIONS.FORCE = TRUE --> CLEARING 'TEST-DB'//
-  if (process.env.NODE_ENV === "test") {
-	  syncOptions.force = true;
-  }
+app.use(express.json());
+app.use(express.urlencoded({ extended: true }));
+app.use(express.static(path.join(__dirname, 'public')));
 
-    db.sequelize.sync(syncOptions).then(function() {
-      app.listen(PORT, function() {
-        console.log("SERVER CONNECTED! 🌎" + PORT);
-    });
-  });
+// app.use(routes);
 
-  module.exports = app;
+sequelize.sync({ force: false }).then(() => {
+  app.listen(PORT, () => console.log(`\nServer Connected! 🌎 🤙 ${PORT}. Visit http://localhost:${PORT} and create an account!`))
+});
+

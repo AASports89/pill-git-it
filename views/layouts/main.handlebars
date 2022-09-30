@@ -1,20 +1,42 @@
 
  <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
-  <meta charset="utf-8">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/css/bootstrap.min.css">
-  <link rel="stylesheet" href="/styles/styles.css" media="screen" title="no title" charset="utf-8">
-  <script type="text/javascript"
-  src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-  <title>INSERT TITLE HERE</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="/stylesheets/style.css">
+    <title>Pill Git It 💊</title>
 </head>
 
 <body>
-
-  {{{body}}}
-  
+    <div class="wrapper">
+        <header class="hero">
+            <div>
+                <nav class"nav">
+                    <a class="link" href="/">App</a>
+                    {{#if loggedIn}}
+                    <a href="/dashboard">Sign Up 🔏</a>
+                    <button id="logout" class="btn-no-style">Logout ❌</button>
+                    {{else}}
+                    <a href="/login">Login ✅</a>
+                    {{/if}}
+                </nav>
+            </div>
+            <h1 class="app-title"><i class="fab"></i>Pill Git It 💊</h1>
+        </header>
+        <main>
+            {{{ body }}}
+        </main>
+        <footer>
+           <strong>* Open Source - ChillPillz 💊 Copyright © 2022 *</strong>
+        </footer>
+    </div>
+    {{#if loggedIn}}
+    <script src="/js/login.js"></script>
+    {{/if}}
 </body>
 
 </html>
