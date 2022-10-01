@@ -2,64 +2,64 @@
     {
         "name": "tylenol",
         "type": "capsule",
-        "color": "orange",
-        "imprint": "3e455",
-        "photoUrl": "...",
-        "description": "round"
+        "color": "blue",
+        "imprint": "3e4",
+        "photoUrl": "../public/images/blue-cap.jpg",
+        "description": "oblong"
 
     },
     {
         "name": "advil",
-        "type": "capsule",
-        "color": "orange",
-        "imprint": "3e455",
-        "photoUrl": "...",
-        "description": "round"
+        "type": "caplet",
+        "color": "blue",
+        "imprint": "t12",
+        "photoUrl": "../public/images/blue-caplt.jpg",
+        "description": "oval"
         
     },
     {
         "name": "motrin",
-        "type": "capsule",
-        "color": "orange",
-        "imprint": "3e455",
-        "photoUrl": "...",
+        "type": "tablet",
+        "color": "white",
+        "imprint": "l03",
+        "photoUrl": "../public/images/white-tab.jpg",
         "description": "round"
         
     },
     {
         "name": "aleve",
-        "type": "capsule",
-        "color": "orange",
-        "imprint": "3e455",
-        "photoUrl": "...",
-        "description": "round"
+        "type": "gelcap",
+        "color": "pink",
+        "imprint": "s20",
+        "photoUrl": "../public/images/pink-cap.jpg",
+        "description": "oval"
         
     },
     {
         "name": "ibuprofen",
         "type": "capsule",
-        "color": "orange",
-        "imprint": "3e455",
-        "photoUrl": "...",
-        "description": "round"
+        "color": "yellow",
+        "imprint": "e45",
+        "photoUrl": "../public/images/yellow-cap.jpg",
+        "description": "oblong"
         
     },
     {
         "name": "aspirin",
-        "type": "capsule",
-        "color": "orange",
-        "imprint": "3e455",
-        "photoUrl": "...",
+        "type": "tablet",
+        "color": "white",
+        "imprint": "p12",
+        "photoUrl": "../public/images/white-tab.jpg",
         "description": "round"
         
     },    
     {
         "name": "midol",
-        "type": "capsule",
-        "color": "orange",
-        "imprint": "3e455",
-        "photoUrl": "...",
-        "description": "round"
+        "type": "tablet",
+        "color": "white",
+        "imprint": "s07",
+        "photoUrl": "../public/images/rect-tab.jpg",
+        "description": "rectangle"
         
     }
 ]
