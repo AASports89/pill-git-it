@@ -7,7 +7,7 @@ class PillData extends Model {}
 
 PillData.init(
   {
-    id: {
+     id:{
       type: DataTypes.INTEGER,
       allowNull: true,
       primaryKey: true,
