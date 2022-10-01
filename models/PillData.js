@@ -9,20 +9,21 @@ PillData.init(
   {
      id:{
       type: DataTypes.INTEGER,
-      allowNull: true,
+      allowNull: false,
       primaryKey: true,
       autoIncrement: true,
     },
     name: {
       type: DataTypes.STRING,
-      allowNull: true,
+      allowNull: false,
+      defaultValue: DataTypes.NOW
     },
     description: {
       type: DataTypes.STRING,
     },
     date_created: {
       type: DataTypes.DATE,
-      allowNull: true,
+      allowNull: false,
       defaultValue: DataTypes.NOW,
     },
     user_id: {

@@ -21,6 +21,7 @@
      name: {
          type: DataTypes.STRING,
          allowNull: false,
+         defaultValue: DataTypes.NOW
      },
      email: {
          type: DataTypes.STRING,
