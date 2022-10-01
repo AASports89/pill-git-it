@@ -2,7 +2,7 @@
   const { Model, DataTypes } = require("sequelize");
   const bcrypt = require("bcrypt");
   const sequelize = require("../config/connection");
-  const { Data } = require("./Data");
+  const { PillData } = require("./");
 
   class Data extends Model{}
 
