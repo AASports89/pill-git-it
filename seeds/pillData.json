@@ -1,7 +1,65 @@
 [
-    {"type": "capsule"},
-    {"color": "orange"},
-    {"imprint": "3e455"},
-   {"photoUrl": "..."},
-    {"description": "round"}
+    {
+        "name": "tylenol",
+        "type": "capsule",
+        "color": "orange",
+        "imprint": "3e455",
+        "photoUrl": "...",
+        "description": "round"
+
+    },
+    {
+        "name": "advil",
+        "type": "capsule",
+        "color": "orange",
+        "imprint": "3e455",
+        "photoUrl": "...",
+        "description": "round"
+        
+    },
+    {
+        "name": "motrin",
+        "type": "capsule",
+        "color": "orange",
+        "imprint": "3e455",
+        "photoUrl": "...",
+        "description": "round"
+        
+    },
+    {
+        "name": "aleve",
+        "type": "capsule",
+        "color": "orange",
+        "imprint": "3e455",
+        "photoUrl": "...",
+        "description": "round"
+        
+    },
+    {
+        "name": "ibuprofen",
+        "type": "capsule",
+        "color": "orange",
+        "imprint": "3e455",
+        "photoUrl": "...",
+        "description": "round"
+        
+    },
+    {
+        "name": "aspirin",
+        "type": "capsule",
+        "color": "orange",
+        "imprint": "3e455",
+        "photoUrl": "...",
+        "description": "round"
+        
+    },    
+    {
+        "name": "midol",
+        "type": "capsule",
+        "color": "orange",
+        "imprint": "3e455",
+        "photoUrl": "...",
+        "description": "round"
+        
+    }
 ]

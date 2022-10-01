@@ -1,39 +1,4 @@
-//DEPENDENCIES & IMPORTS//
-    const sequelize = require("../config/connection");
-    const axios = require("axios");
-    const User = require("../models/User");
-
-    const userData = require("./user-seeds.json");
-    const pillData = require('./pillData.json');
-
-
-//CREATE TABLES & SEED FOR TESTING//
-    const seedDatabase = async () => {
-        await sequelize.sync({ force: true });
-
-        await User.bulkCreate(userData, {
-        individualHooks: true,
-        returning: true,
-        });
-    };
- 
-    const {faker} = require('@faker-js/faker');
-    const _TYPES = ["Gel-Cap", "Pill", "Capsule", "Tablet", "Caplet"];
-    const _COLORS = ["Red", "Blue", "Green", "Orange", "White", "Yellow", "Purple", "Pink"];
-    const _pillData = [];
-        for (let i = 0; i < 10; i++) {
-        _pillData.push
-        ({
-        type: faker.helpers.arrayElement(_TYPES),
-        color: faker.helpers.arrayElement(_COLORS),
-        imprint: faker.random.alphaNumeric(5),
-        photoUrl: faker.image.food(),
-        description: faker.commerce.productDescription(),
-        });
-        console.log(_pillData);
-    }
-     
-    // const seedpillData = () => _pillData.bulkCreate(_pillData);
+// const seedpillData = () => _pillData.bulkCreate(_pillData);
     // module.exports = seedpillData;
     // console.log(_pillData);
     // const _pillData = [];
@@ -58,7 +23,28 @@
         // console.log("Manufacturer: " + list[1].labeler)
         // console.log("Pill Name: " + list[1].name)
         // });
-    
-    seedDatabase();
-    process.exit(0);
-    
+
+        const { faker } = require('@faker-js/faker');
+const _TYPES = ["Gel-Cap", "Pill", "Capsule", "Tablet", "Caplet"];
+const _COLORS = ["Red", "Blue", "Green", "Orange", "White", "Yellow", "Purple", "Pink"];
+const _pillData = [];
+for (let i = 0; i < 10; i++) {
+    _pillData.push
+        ({
+            type: faker.helpers.arrayElement(_TYPES),
+            color: faker.helpers.arrayElement(_COLORS),
+            imprint: faker.random.alphaNumeric(5),
+            photoUrl: faker.image.food(),
+            description: faker.commerce.productDescription(),
+        });
+    console.log(_pillData)
+};
+
+// list of paink relievers
+tylenol
+motrin
+advil 
+Aleve 
+ibuprofen
+aspirin
+midol

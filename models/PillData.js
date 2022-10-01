@@ -2,11 +2,11 @@
   const { Model, DataTypes } = require("sequelize");
   const bcrypt = require("bcrypt");
   const sequelize = require("../config/connection");
-  const { Data } = require("./Data");
+  const { PillData } = require("./PillData");
 
-  class Data extends Model{}
+  class PillData extends Model{}
 
-  Data.init({
+  PillData.init({
     id: {
     type: DataTypes.INTEGER,
     allowNull: false,
@@ -42,4 +42,4 @@
   }
 );
 
-module.exports = Data;
+module.exports = PillData;
