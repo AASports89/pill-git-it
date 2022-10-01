@@ -1,6 +1,6 @@
 //IMPORT//
 const { Model, DataTypes } = require("sequelize");
-const bcryptjs = require("bcryptjs");
+const bcrypt = require("bcrypt");
 const sequelize = require("../config/connection");
 
 class PillData extends Model {}
