@@ -37,4 +37,14 @@ for (let i = 0; i < 10; i++) {
             photoUrl: faker.image.food(),
             description: faker.commerce.productDescription(),
         });
-    console.log(_pillData);
+    console.log(_pillData)
+};
+
+// list of paink relievers
+tylenol
+motrin
+advil 
+Aleve 
+ibuprofen
+aspirin
+midol
