@@ -1,14 +1,13 @@
 // // IMPORT//
 const User = require("./User");
-const Data = require("./Data");
+const PillData = require("./PillData");
 
-User.hasMany(Data, {
-    foreignKey: "user_id",
-    onDelete: "CASCADE"
+User.hasMany(PillData, {
+  foreignKey: "user_id",
 });
 
-Data.belongsTo(User, {
-    foreignKey: "user_id",
+PillData.belongsTo(User, {
+  foreignKey: "user_id",
 });
 
-module.exports = {User, Data};
+module.exports = { User, PillData };
