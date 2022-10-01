@@ -1,12 +1,9 @@
-//DEPENDENCY//
-const router = require("express").Router();
-//IMPORT API ROUTES --> SEPARATELY//
-const apiRoutes = require("./api");
-const loginRoutes = require("./login-routes");
+const router = require('express').Router();
 
-//CONTROLLER --> ROUTES//
-router.use("/", indexRoutes);
-router.use("/api", apiRoutes);
-router.use("/login", loginRoutes);
+const apiRoutes = require('./api');
+const homeRoutes = require('./homeRoutes');
+
+router.use('/', homeRoutes);
+router.use('/api', apiRoutes);
 
 module.exports = router;

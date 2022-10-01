@@ -1,10 +1,8 @@
-//DEPENDENCY//
-const router = require("express").Router();
+const router = require('express').Router();
+const userRoutes = require('./userRoutes');
+const Routes = require('./projectRoutes');
 
-//IMPORT//
-const userRoutes = require("./user-routes.js");
-
-//API ROUTE PASS -->//
-router.use("/user", userRoutes);
+router.use('/users', userRoutes);
+router.use('/projects', projectRoutes);
 
 module.exports = router;
