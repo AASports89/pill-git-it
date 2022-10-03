@@ -1,4 +1,3 @@
-// // IMPORT//
 const User = require("./User");
 const PillData = require("./PillData");
 
