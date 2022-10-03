@@ -5,7 +5,7 @@ const withAuth = require('../utils/auth');
 router.get('/', async (req, res) => {
   try {
     // Get all projects and JOIN with user data
-    const pillData = await PillData.findAll({
+    const dbpillData = await PillData.findAll({
       include: [
         {
           model: User,
@@ -15,7 +15,7 @@ router.get('/', async (req, res) => {
     });
 
     // Serialize data so the template can read it
-    const pills = pillData.map((pill) => pill.get({ plain: true }));
+    const pills = dbpillData.map((pill) => pill.get({ plain: true }));
 
     // Pass serialized data and session flag into template
     res.render('homepage', { 
@@ -29,7 +29,7 @@ router.get('/', async (req, res) => {
 
 router.get('/pillData/:id', async (req, res) => {
   try {
-    const pillData = await PillData.findByPk(req.params.id, {
+    const dbpillData = await PillData.findByPk(req.params.id, {
       include: [
         {
           model: User,
@@ -38,7 +38,7 @@ router.get('/pillData/:id', async (req, res) => {
       ],
     });
   // Serialize data so the template can read it
-    const pills = pillData.get({ plain: true });
+    const pills = dbpillData.get({ plain: true });
 
     res.render('pill', {
       ...pills,
