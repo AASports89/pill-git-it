@@ -1,65 +1,58 @@
 [
-    {
-        "name": "tylenol",
-        "type": "capsule",
-        "color": "blue",
-        "imprint": "3e4",
-        "photoUrl": "../public/images/blue-cap.jpg",
-        "description": "oblong"
-
-    },
-    {
-        "name": "advil",
-        "type": "caplet",
-        "color": "blue",
-        "imprint": "t12",
-        "photoUrl": "../public/images/blue-caplt.jpg",
-        "description": "oval"
-        
-    },
-    {
-        "name": "motrin",
-        "type": "tablet",
-        "color": "white",
-        "imprint": "l03",
-        "photoUrl": "../public/images/white-tab.jpg",
-        "description": "round"
-        
-    },
-    {
-        "name": "aleve",
-        "type": "gelcap",
-        "color": "pink",
-        "imprint": "s20",
-        "photoUrl": "../public/images/pink-cap.jpg",
-        "description": "oval"
-        
-    },
-    {
-        "name": "ibuprofen",
-        "type": "capsule",
-        "color": "yellow",
-        "imprint": "e45",
-        "photoUrl": "../public/images/yellow-cap.jpg",
-        "description": "oblong"
-        
-    },
-    {
-        "name": "aspirin",
-        "type": "tablet",
-        "color": "white",
-        "imprint": "p12",
-        "photoUrl": "../public/images/white-tab.jpg",
-        "description": "round"
-        
-    },    
-    {
-        "name": "midol",
-        "type": "tablet",
-        "color": "white",
-        "imprint": "s07",
-        "photoUrl": "../public/images/rect-tab.jpg",
-        "description": "rectangle"
-        
-    }
+  {
+    "name": "tylenol",
+    "type": "capsule",
+    "color": "blue",
+    "imprint": "3e4",
+    "photoUrl": "../public/images/blue-cap.jpg",
+    "shape": "oblong"
+  },
+  {
+    "name": "advil",
+    "type": "caplet",
+    "color": "blue",
+    "imprint": "t12",
+    "photoUrl": "../public/images/blue-caplt.jpg",
+    "shape": "oval"
+  },
+  {
+    "name": "motrin",
+    "type": "tablet",
+    "color": "white",
+    "imprint": "l03",
+    "photoUrl": "../public/images/white-tab.jpg",
+    "shape": "round"
+  },
+  {
+    "name": "aleve",
+    "type": "gelcap",
+    "color": "pink",
+    "imprint": "s20",
+    "photoUrl": "../public/images/pink-cap.jpg",
+    "shape": "oval"
+  },
+  {
+    "name": "ibuprofen",
+    "type": "capsule",
+    "color": "yellow",
+    "imprint": "e45",
+    "photoUrl": "../public/images/yellow-cap.jpg",
+    "shape": "oblong"
+  },
+  {
+    "name": "aspirin",
+    "type": "tablet",
+    "color": "white",
+    "imprint": "p12",
+    "photoUrl": "../public/images/white-tab.jpg",
+    "shape": "round"
+  },
+  {
+    "name": "midol",
+    "type": "tablet",
+    "color": "white",
+    "imprint": "s07",
+    "photoUrl": "../public/images/rect-tab.jpg",
+    "shape": "rectangle"
+  }
 ]
