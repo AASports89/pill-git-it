@@ -1,0 +1,57 @@
+<div class="row">
+  <div class="col-auto">
+    <h2>Welcome, {{name}}!</h2>
+  </div>
+</div>
+
+<div class="row mt-4">
+  <div class="col-md-6">
+    <h3>Search for Pills:</h3>
+
+    <form class="new-pill-form">
+      <div class="form-group">
+        <label for="pill-imprint">Imprint:</label>
+        <input class="form-input" type="text" id="imprint" name="pill-imprint" />
+       
+      </div>
+      <div class="form-group">
+        <label for="shape">Shape:</label>
+        <input class="form-input" type="number" id="shape" name="pill-shape" />
+        <option value='round'>Round</option>
+        <option value='oval'>Oval</option>
+        <option value='oblong'>Oblong</option>
+        <option value='rectangle'>Rectangle</option>
+      </div>
+      <div class="form-group">
+        <label for="color">Color:</label>
+        <input class="form-input" id="color" name="pill-color"></input>
+        <option value='blue'>Blue</option>
+        <option value='white'>White</option>
+        <option value='pink'>Pink</option>
+        <option value='yellow'>Yellow</option>
+      </div>
+      <div class="form-group">
+        <button type="submit" class="btn btn-primary">Search</button>
+      </div>
+    </form>
+  </div>
+
+  {{#if pillData.length}}
+  <div class="col-md-6 pill-list">
+    <h3>Current Search:</h3>
+
+    {{#each pillData as |pill|}}
+    <div class="row mb-2">
+      <div class="col-md-8">
+        <h4><a href="/pillData/{{pill.id}}">{{pill.name}}</a></h4>
+      </div>
+      <div class="col-md-4">
+        <button class="btn btn-sm btn-danger" data-id="{{pill.id}}">DELETE</button>
+      </div>
+    </div>
+    {{/each}}
+  </div>
+  {{/if}}
+</div>
+
+<script src="./js/profile.js"></script>
