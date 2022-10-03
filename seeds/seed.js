@@ -1,9 +1,10 @@
 //DEPENDENCIES & IMPORTS//
 const sequelize = require("../config/connection");
-const { User, PillData } = require("../models");
+const { User, PillData, Comment } = require("../models");
 
 const userData = require("./user-seeds.json");
 const pillsData = require("./pillData.json");
+const commentData = require("./comment-seeds.json");
 
 //CREATE TABLES & SEED FOR TESTING//
 const seedDatabase = async () => {
@@ -13,6 +14,7 @@ const seedDatabase = async () => {
     individualHooks: true,
     returning: true,
   });
+
   for (const pills of pillsData) {
     await PillData.create({
       ...pills,
@@ -20,5 +22,8 @@ const seedDatabase = async () => {
   }
   process.exit(0);
 };
+const seedComment = () => Comment.bulkCreate(commentData);
+
+module.exports = seedComment;
 
 seedDatabase();

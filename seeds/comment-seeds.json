@@ -1,0 +1,11 @@
+[
+  {
+    "image": "./images/white-tab.jpg",
+    "type": "tablet",
+    "color": "white",
+    "imprint": "l03",
+    "shape": "round",
+    "user_id": 1,
+    "post_id": 1
+  }
+]
