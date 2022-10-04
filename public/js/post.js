@@ -5,17 +5,17 @@ const submitCommentHandler = async (event) => {
     const type = document.querySelector("#type-input");
     const color = document.querySelector("#color-input");
     const imprint = document.querySelector("#imprint-input");
-    const description = document.querySelector("#description-input");
+    const shape = document.querySelector("#description-input");
     const author_id = document.querySelector(".logged-in-user-id").innerHTML;
     const post_id = document.querySelector(".current-post-id").innerHTML;
   
     if (!author_id) {
         document.location.replace("/login");
     } else {
-        if (comment, photo_Url && type && color && imprint && description) {
+        if (comment, photo_Url && type && color && imprint && shape) {
             const response = await fetch("/api/comment/", {
                 method: "POST",
-                body: JSON.stringify({ comment, photo_Url, type, color, imprint, description, author_id, post_id }),
+                body: JSON.stringify({ comment, photo_Url, type, color, imprint, shape, author_id, post_id }),
                 headers: { "Content-Type": "application/json" },
             });
             if (response.ok) {

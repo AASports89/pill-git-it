@@ -39,11 +39,11 @@ format_summary: (imprint) => {
       return imprint;
   }
 },
-format_summary: (description) => {
-  if (description.length > 300) {
-      return description.substring(0, 300) + "...";
+format_summary: (shape) => {
+  if (shape.length > 300) {
+      return shape.substring(0, 300) + "...";
   } else {
-      return description;
+      return shape;
   }
 },
 };

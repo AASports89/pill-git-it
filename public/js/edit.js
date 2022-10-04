@@ -6,7 +6,7 @@ const submitPostHandler = async (event) => {
     const type = document.querySelector("#type-input");
     const color = document.querySelector("#color-input");
     const imprint = document.querySelector("#imprint-input");
-    const description = document.querySelector("#description-input");
+    const shape = document.querySelector("#description-input");
     const author_id = document.querySelector(".logged-in-user-id").innerHTML;
     const post_id = document.querySelector(".current-post-id").innerHTML;
 
@@ -15,11 +15,11 @@ const submitPostHandler = async (event) => {
           "Please login or signup in order to create or modify any posts ❗⛔"
         );
     } else {
-        if (title && photo_Url && type && color && imprint && description && author_id) {
+        if (title && photo_Url && type && color && imprint && shape && author_id) {
 
             const response = await fetch("/api/post/" + post_id, {
                 method: "PUT",
-                body: JSON.stringify({ title, photo_Url, type, color, imprint, description, author_id }),
+                body: JSON.stringify({ title, photo_Url, type, color, imprint, shape, author_id }),
                 headers: { "Content-Type": "application/json" },
             });
             if (response.ok) {

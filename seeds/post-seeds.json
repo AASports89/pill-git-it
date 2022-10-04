@@ -5,7 +5,7 @@
     "type": "capsule",
     "color": "blue",
     "imprint": "3e4",
-    "description": "oblong",
+    "shape": "oblong",
     "author_id": 1
   },
   {
@@ -14,7 +14,7 @@
     "type":  "caplet",
     "color": "blue",
     "imprint": "t12",
-    "description": "oval",
+    "shape": "oval",
     "author_id": 2
   },
   {
@@ -23,7 +23,7 @@
     "type": "tablet",
     "color": "white",
     "imprint": "l03",
-    "description": "round",
+    "shape": "round",
     "author_id": 3
   },
   {
@@ -32,7 +32,7 @@
     "type": "gelcap",
     "color": "pink",
     "imprint": "s20",
-    "description": "oval",
+    "shape": "oval",
     "author_id": 2
   },
   {
@@ -41,7 +41,7 @@
     "type": "capsule",
     "color": "yellow",
     "imprint": "e45",
-    "description": "oblong",
+    "shape": "oblong",
     "author_id": 4
   },
   {
@@ -50,7 +50,7 @@
     "type": "tablet",
     "color": "white",
     "imprint": "p12",
-    "description": "round",
+    "shape": "round",
     "author_id": 2
   },    
   {
@@ -59,7 +59,7 @@
     "type": "tablet",
     "color": "white",
     "imprint": "s07",
-    "description": "rectangle",
+    "shape": "rectangle",
     "author_id": 1
   }
 ]

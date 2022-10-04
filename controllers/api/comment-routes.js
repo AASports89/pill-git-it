@@ -9,7 +9,7 @@ router.post("/", async (req, res) => {
           type: req.body.type,
           color: req.body.color,
           imprint: req.body.imprint,
-          description: req.body.description,
+          shape: req.body.shape,
           post_id: req.body.post_id,
           author_id: req.body.author_id,
         });
