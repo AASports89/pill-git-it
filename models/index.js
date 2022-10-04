@@ -1,37 +1,32 @@
 const User = require("./User");
-const PillData = require("./PillData");
+const Post = require("./Post");
 const Comment = require("./Comment");
 
-User.hasMany(PillData, {
-  foreignKey: "user_id",
+Post.belongsTo(User, {
+    foreignKey: "author_id",
 });
 
-PillData.belongsTo(User, {
-  foreignKey: "user_id",
+User.hasMany(Post, {
+    foreignKey: "author_id",
+    onDelete: "CASCADE",
 });
 
-PillData.hasMany(Comment, {
-  foreignKey: 'postId',
-  onDelete: 'CASCADE',
-  hooks: true,
+Comment.belongsTo(Post, {
+    foreignKey: "post_id",
 });
 
-User.hasMany(Comment, {
-  foreignKey: 'user_id',
-  onDelete: 'cascade',
-  hooks: true,
+Post.hasMany(Comment, {
+    foreignKey: "post_id",
+    onDelete: "CASCADE",
 });
 
 Comment.belongsTo(User, {
-  foreignKey: 'user_id',
-  onDelete: 'CASCADE',
-  hooks: true,
+    foreignKey: "author_id",
 });
 
-Comment.belongsTo(PillData, {
-  foreignKey: 'user_id',
-  onDelete: 'cascade',
-  hooks: true,
+User.hasMany(Comment, {
+    foreignKey: "author_id",
+    onDelete: "CASCADE",
 });
 
-module.exports = { User, PillData, Comment };
+module.exports = {User, Post, Comment};
