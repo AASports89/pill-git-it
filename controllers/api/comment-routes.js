@@ -1,51 +1,38 @@
-const router = require('express').Router();
-const { Comment } = require('../../models');
-const withAuth = require('../../utils/auth');
+const router = require("express").Router();
+const { Comment } = require("../../models");
 
-router.get('/', (req, res) => {
-  Comment.findAll({})
-    .then((commentData) => res.json(commentData))
-    .catch((err) => {
-      res.status(500).json(err);
-    });
-});
 //CREATE COMMENT//
-router.post('/', withAuth, (req, res) => {
-  if (req.session) {
-    Comment.create({
-        image: req.body.image,
-        type: req.body.type,
-        color: req.body.color,
-        imprint: req.body.imprint,
-        description: req.body.description,
-        post_id: req.body.post_id,
-        user_id: req.session.user_id,
-    })
-      .then((commentData) => res.json(commentData))
-      .catch((err) => {
-        res.status(400).json(err);
-      });
-  }
+router.post("/", async (req, res) => {
+    try {
+        const dbCommentData = await Comment.create({
+          image: req.body.image,
+          type: req.body.type,
+          color: req.body.color,
+          imprint: req.body.imprint,
+          description: req.body.description,
+          post_id: req.body.post_id,
+          author_id: req.session.author_id,
+        });
+        return res.status(200).json(dbCommentData);
+    } catch (err) {
+        console.log(err);
+        return res.status(500).json(err);
+    }
 });
 
-//DELETE//
-router.delete('/:id', withAuth, (req, res) => {
-  Comment.destroy({
-    where: {
-      id: req.params.id,
-    },
-  })
-    .then((commentData) => {
-      if (!commentData) {
-        res.status(404).json({ message: 'No comment found with this id❗⛔' });
-        return;
-      }
-      res.json(commentData);
-    })
-    .catch((err) => {
-      console.log(err);
-      res.status(500).json(err);
-    });
+//DELETE COMMENT//
+router.delete("/:id", async (req, res) => {
+    try {
+        const deleteCommentData = await Comment.destroy({
+            where: {
+                id: req.params.id,
+            },
+        });
+        return res.status(200).json(deleteCommentData);
+    } catch (err) {
+        console.log(err);
+        return res.status(500).json(err);
+    }
 });
 
 module.exports = router;

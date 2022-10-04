@@ -1,0 +1,46 @@
+<section class="hero ">
+    <div class="hero-body">
+      <div class="container">
+        <div class="columns">
+          <div class="column is-8 is-offset-2">
+            <figure class="image is-16by9">
+              <a href="/post/{{posts.0.0.id}}"><img src="https://res.cloudinary.com/dhqsixgmo/image/upload/v1664851515/pill-git-it-images/th-1_ws6trk.jpg" alt="photo_Url"></a>
+            </figure>
+          </div>
+        </div>
+        <section class="section">
+          <div class="columns">
+            <div class="column is-8 is-offset-2">
+              <div class="content is-medium">
+                <h2 class="subtitle is-4">{{format_time posts.0.0.createdAt}}</h2>
+                <h1 class="title"><a href="/post/{{posts.0.0.id}}">{{posts.0.0.title}}</a></h1>
+                <h6>by {{posts.0.0.user.username}}</h6>
+                <p>{{posts.0.0.photo_Url}}
+                  {{posts.0.0.type}}
+                  {{posts.0.0.color}}
+                  {{posts.0.0.imprint}}
+                  {{posts.0.0.description}}
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+        <div class="is-divider"></div>
+      </div>
+    </div>
+  </section>
+  <!-- Articles -->
+  <section class="hero ">
+    <div class="hero-body-neg">
+      <div class="container">
+        {{#each posts as |post|}}
+          {{#if @first}}
+            <!-- Don't post 1st one because it goes up top -->
+          {{else}}
+            {{> post-summary}}
+          {{/if}}
+        {{/each}}
+      </div>
+    </div>
+  </section>
+  <script src='/js/index.js'></script>
