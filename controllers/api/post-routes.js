@@ -5,17 +5,13 @@ const { Post } = require("../../models");
 router.post("/", async (req, res) => {
     try {
         const dbPostData = await Post.create({
-          title: req.body.title,
-          image: req.body.image,
-          type: req.body.type,
-          color: req.body.color,
-          imprint: req.body.imprint,
-
-          description: req.body.description,
-
-          shape: req.body.shape,
-
-          author_id: req.body.author_id,
+            title: req.body.title,
+            photo_Url: req.body.photo_Url,
+            type: req.body.type,
+            color: req.body.color,
+            imprint: req.body.imprint,
+            shape: req.body.shape,
+            author_id: req.body.author_id,
         });
         return res.status(200).json(dbPostData);
     } catch (err) {

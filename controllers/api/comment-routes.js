@@ -5,7 +5,7 @@ const { Comment } = require("../../models");
 router.post("/", async (req, res) => {
     try {
         const dbCommentData = await Comment.create({
-          image: req.body.image,
+          photo_Url: req.body.photo_Url,
           type: req.body.type,
           color: req.body.color,
           imprint: req.body.imprint,

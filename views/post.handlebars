@@ -12,7 +12,7 @@
                 <div class="columns">
                     <div class="column is-8 is-offset-2">
                         <div class="content is-medium">
-                            <h2 class="subtitle is-4">{{format_time
+                            <h2 class="subtitle is-4">{{format_date
                                     postData.createdAt
                                 }}</h2>
                             <h1 class="title">{{postData.title}}</h1>
@@ -140,7 +140,7 @@ document.getElementById("upload_widget").addEventListener("click", function(){
                             {{comment}}
                             <p class="has-text-right"><strong>-
                                 {{user.username}},
-                                {{format_time createdAt}}</strong>
+                                {{format_date createdAt}}</strong>
                                 {{#if ../loggedInUserData.isAdmin}}
                                     (<span class="delete-comment" data-id="{{id}}">Delete ❌</span>)</p>
                                 {{/if}}
