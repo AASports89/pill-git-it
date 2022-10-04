@@ -11,7 +11,7 @@ router.post("/", async (req, res) => {
           color: req.body.color,
           imprint: req.body.imprint,
           description: req.body.description,
-          author_id: req.session.author_id,
+          author_id: req.body.author_id,
         });
         return res.status(200).json(dbPostData);
     } catch (err) {
