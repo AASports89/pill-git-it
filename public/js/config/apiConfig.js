@@ -1,6 +1,6 @@
 const apiAccessProtocol = "http";
 const apiDomain = "localhost";
-const apiPort = 3306;
+const apiPort = 3001;
 
 //API MIDDLEWARE --> CREATE CUSTOM DOMAINS//
 function getApiUrl() {
