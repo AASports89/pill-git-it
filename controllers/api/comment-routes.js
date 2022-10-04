@@ -11,7 +11,7 @@ router.post("/", async (req, res) => {
           imprint: req.body.imprint,
           description: req.body.description,
           post_id: req.body.post_id,
-          author_id: req.session.author_id,
+          author_id: req.body.author_id,
         });
         return res.status(200).json(dbCommentData);
     } catch (err) {
