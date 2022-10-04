@@ -31,7 +31,7 @@ Post.init(
           type: DataTypes.STRING(1000),
           allowNull: false,
           },
-          description: {
+          shape: {
           type: DataTypes.STRING(1000),
           allowNull: false,
           },

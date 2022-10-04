@@ -15,12 +15,11 @@
                 <h2 class="subtitle is-4">{{format_time posts.0.0.createdAt}}</h2>
                 <h1 class="title"><a href="/post/{{posts.0.0.id}}">{{posts.0.0.title}}</a></h1>
                 <h6>by {{posts.0.0.user.username}}</h6>
-                <p>{{posts.0.0.photo_Url}}
-                  {{posts.0.0.type}}
-                  {{posts.0.0.color}}
-                  {{posts.0.0.imprint}}
-                  {{posts.0.0.description}}
-                </p>
+                <img src="{{posts.0.0.photo_Url}}">
+                  <p>{{posts.0.0.type}}</p>
+                  <p>{{posts.0.0.color}}</p>
+                  <p>{{posts.0.0.imprint}}</p>
+                  <p>{{posts.0.0.shape}}</p>
               </div>
             </div>
           </div>

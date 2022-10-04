@@ -27,7 +27,7 @@ Comment.init(
           type: DataTypes.STRING,
           allowNull: false,
         },
-        description: {
+        shape: {
           type: DataTypes.STRING,
           allowNull: false,
         },

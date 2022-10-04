@@ -10,7 +10,7 @@ router.post("/", async (req, res) => {
           type: req.body.type,
           color: req.body.color,
           imprint: req.body.imprint,
-          description: req.body.description,
+          shape: req.body.shape,
           author_id: req.body.author_id,
         });
         return res.status(200).json(dbPostData);
