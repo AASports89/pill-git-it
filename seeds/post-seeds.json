@@ -1,58 +1,65 @@
 [
   {
-    "name": "tylenol",
+    "title": "tylenol",
+    "photo_Url": "https://res.cloudinary.com/dhqsixgmo/image/upload/v1664851514/pill-git-it-images/blue-cap_tuv1qy.jpg",
     "type": "capsule",
     "color": "blue",
     "imprint": "3e4",
-    "photoUrl": "../public/images/blue-cap.jpg",
-    "shape": "oblong"
+    "description": "oblong",
+    "author_id": 1
   },
   {
-    "name": "advil",
-    "type": "caplet",
+    "title": "advil",
+    "photo_Url": "https://res.cloudinary.com/dhqsixgmo/image/upload/v1664851514/pill-git-it-images/blue-caplt_gl2v0s.jpg",
+    "type":  "caplet",
     "color": "blue",
     "imprint": "t12",
-    "photoUrl": "../public/images/blue-caplt.jpg",
-    "shape": "oval"
+    "description": "oval",
+    "author_id": 2
   },
   {
-    "name": "motrin",
+    "title": "motrin",
+    "photo_Url": "https://res.cloudinary.com/dhqsixgmo/image/upload/v1664851514/pill-git-it-images/white-tab_m8srwd.jpg",
     "type": "tablet",
     "color": "white",
     "imprint": "l03",
-    "photoUrl": "../public/images/white-tab.jpg",
-    "shape": "round"
+    "description": "round",
+    "author_id": 3
   },
   {
-    "name": "aleve",
+    "title": "aleve",
+    "photo_Url": "https://res.cloudinary.com/dhqsixgmo/image/upload/v1664851514/pill-git-it-images/pink-oval-cap_pnb0lj.jpg",
     "type": "gelcap",
     "color": "pink",
     "imprint": "s20",
-    "photoUrl": "../public/images/pink-cap.jpg",
-    "shape": "oval"
+    "description": "oval",
+    "author_id": 2
   },
   {
-    "name": "ibuprofen",
+    "title": "ibuprofen",
+    "photo_Url": "https://res.cloudinary.com/dhqsixgmo/image/upload/v1664851514/pill-git-it-images/yellow-cap_x9kpkf.jpg",
     "type": "capsule",
     "color": "yellow",
     "imprint": "e45",
-    "photoUrl": "../public/images/yellow-cap.jpg",
-    "shape": "oblong"
+    "description": "oblong",
+    "author_id": 4
   },
   {
-    "name": "aspirin",
+    "title": "aspirin",
+    "photo_Url": "https://res.cloudinary.com/dhqsixgmo/image/upload/v1664851514/pill-git-it-images/white-tab_m8srwd.jpg",
     "type": "tablet",
     "color": "white",
     "imprint": "p12",
-    "photoUrl": "../public/images/white-tab.jpg",
-    "shape": "round"
-  },
+    "description": "round",
+    "author_id": 2
+  },    
   {
-    "name": "midol",
+    "title": "midol",
+    "photo_Url": "https://res.cloudinary.com/dhqsixgmo/image/upload/v1664851515/pill-git-it-images/rect-tab_ej3ymc.jpg",
     "type": "tablet",
     "color": "white",
     "imprint": "s07",
-    "photoUrl": "../public/images/rect-tab.jpg",
-    "shape": "rectangle"
+    "description": "rectangle",
+    "author_id": 1
   }
 ]
