@@ -31,13 +31,13 @@
       </div>
     </div>
   </section>
-  <!-- Articles -->
+{{!-- AREA FOR ARTICLES --}}
   <section class="hero ">
     <div class="hero-body-neg">
       <div class="container">
         {{#each posts as |post|}}
           {{#if @first}}
-            <!-- Don't post 1st one because it goes up top -->
+{{!-- EMPTY SPACE --> PLACE-HOLDER --}}
           {{else}}
             {{> post-summary}}
           {{/if}}

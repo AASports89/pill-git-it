@@ -11,58 +11,45 @@
             <h1 style="font-size: 225%; text-align: center; font-weight: bold; border-bottom: solid 0.5px black; color: black" class="title">{{postData.title}}</h1>
             <h2 style="text-align: center; font-size: 100%; color: black">{{format_date postData.createdAt}}</h2>
             <h6 style="text-align: center; color: black" >by {{postData.user.username}}</h6>
-            <img style="margin-left: 37%; border: dashed 1.25px black" id="photo_Url" src="{{postData.photo_Url}}">
+            <img style="border: dashed 1.25px black" id="photo_Url" src="{{postData.photo_Url}}">
         </form>
     </div>
     </div>
-        
+       <div class="card-body">
+   <button id="upload_widget" class="cloudinary-button">Upload Image 📥</button>
+<script src="https://upload-widget.cloudinary.com/global/all.js" type="text/javascript"></script> 
+        </div>  
     <div class="col">
      <form id="comment-section">
          <div class="field-body">
                     <div class="field">
                     <form class="box" id="comment-section">
-                        <label style="color: black; font-size: 200%; text-align: center; border-bottom: solid 1px black" class="label is-large" class="label">Post Pill Data</label>
+                        <label style="color: black; font-size: 200%; text-align: center; border-bottom: solid 1px black" class="label is-large" class="label">Post Pill Data 🚀</label>
                         <div class="field">
-                            <label style="color: black; font-size: 125%" class="label">Name/Data</label>
+                            <label style="color: black; font-size: 125%" class="label">Name/Data 🧬</label>
     <div class="control">
     <input type="text" value="{{postData.title}}" class="input subject-input" required/>
     </div>
     <div class="field-label">
-    <label style="color: black" class="label">Comment 🖊️</label>
-    <textarea class="textarea comment-input"></textarea>
+    <label style="color: black" class="label">Comment 🖊️</label><textarea class="textarea comment-input" placeholder="Please enter any comments regarding post data here..."></textarea>
     </div>
     </div>
-
- <div class="card-body">
-   <button id="upload_widget" class="cloudinary-button">Upload Image 📥</button>
-<script src="https://upload-widget.cloudinary.com/global/all.js" type="text/javascript"></script>  
-            <script type="text/javascript">  
-              var myWidget = cloudinary.createUploadWidget({
-                cloudName: 'dhqsixgmo', 
-                  uploadPreset: 'dpfyatxo'}, (error, result) => { 
-                  if (!error && result && result.event === "success") { 
-                      console.log('Done! Here is the image info: ', result.info); 
-                    }
-                  })
-document.getElementById("upload_widget").addEventListener("click", function(){
-    myWidget.open();
-  }, false);
-</script>
-        </div>
-        </div>
+        
+    <div class="control">
+    <button class="button is-success comment-submit">Submit 📥</button>
+    </div>
     </form>
     </section>
     <div class="container">
   <div class="row">
     <div class="col">
-            <input type="hidden" name="_method" value="POST">
             <div style="padding: 2%" class="form-group dropdown">
                 <label style="font-weight: bold; color: black; font-size: 115%" for="type" value="">Type 🧪:</label>
                 <select style="font-size: 110%" class="form-control" id="type-input" name="type">
                     <option>select...</option>
                     <option>capsule</option>
                     <option>tablet</option>
-                    <option>tablet</option>
+                    <option>caplet</option>
                     <option>gelcap</option>
                 </select>
             </div>
@@ -95,14 +82,9 @@ document.getElementById("upload_widget").addEventListener("click", function(){
         </input>
         </div>
         </form>
-                            <div class="control">
-                                <button class="button is-success comment-submit">
-                                    Submit 📥
-                                </button>
-                            </div>
-                            </div>
+                            
 
-<div class="container" style="border: solid 2px whitesmoke">
+<div class="container" style="margin-top: 5%; border: solid 2px whitesmoke">
     <h1 style="text-align: center; font-size: 150%; color: whitesmoke">Image Match</h1>
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>

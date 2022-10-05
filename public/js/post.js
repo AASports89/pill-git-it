@@ -2,9 +2,7 @@ let photo_Url = "";
 const submitCommentHandler = async (event) => {
   event.preventDefault();
   console.log(photo_Url);
-  const comment = document.querySelector(".comment-input").value.trim();
-
-
+  const comment = document.querySelector(".comment-input").value;
   const type = document.querySelector("#type-input").value;
   const color = document.querySelector("#color-input").value;
   const imprint = document.querySelector("#imprint-input").value;
@@ -77,6 +75,7 @@ const deleteLinks = document.querySelectorAll(".delete-comment");
 deleteLinks.forEach((el) =>
   el.addEventListener("click", (event) => deleteCommentHandler(event))
 );
+//CLOUDIARY WIDGET --> IMAGE UPLOADS//
 var myWidget = cloudinary.createUploadWidget({
     cloudName: 'dhqsixgmo', 
       uploadPreset: 'dpfyatxo'}, (error, result) => { 
