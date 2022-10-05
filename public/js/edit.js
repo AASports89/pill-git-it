@@ -2,7 +2,7 @@ const submitPostHandler = async (event) => {
     event.preventDefault();
 
     const title = document.querySelector(".subject-input");
-    const photo_Url = document.querySelector("#photo_Url");
+    const photo_Url = cloudinary.createUploadWidget(document.querySelector("#photo_Url-input"));
     const type = document.querySelector("#type-input");
     const color = document.querySelector("#color-input");
     const imprint = document.querySelector("#imprint-input");
