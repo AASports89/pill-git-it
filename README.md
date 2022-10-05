@@ -28,8 +28,9 @@ Overall, **'Pill Git It'** follows the ```MVC``` outline referencing "full-stack
 
 ```md
 AS A everyday consumer
-I WANT to be able to search various data related to medication
-SO THAT I can retrieve specific aspects of pills such as type, color, shape & images
+I WANT to be able to research various information related to medication & pills
+SO THAT I can retrieve specific aspects of pills such as images, type, color, imprint & shape 
+SO THAT I can accurately identify the pills/medication
 ```
 
 ## Acceptance Criteria
@@ -42,12 +43,12 @@ WHEN I open the web application
 THEN I am presented with a landing page with various links to login, a dashboard, signup & modify data
 WHEN I click on the link to the dashboard page
 THEN I am presented with a page with existing data posts listed in table format, plus a link to a route where I am able to post additional data & edit my own existing contributions
-WHEN I enter a pill's name, type, color, shape, imprint & images
-THEN a Submit button appears at the bottom of the form page
+WHEN I upload a pill's image & enter the type, color, imprint and shape
+THEN using the Submit button at the bottom of the form page I can save my data
 WHEN I click on the Save button
-THEN the new data I have entered is saved and appears in the dashboard table along with the previous entered data
+THEN the new data I have entered is posted and appears in the dashboard table along with the previous entered data
 WHEN I click on an existing data in the table I am able to modify it
-THEN it will redirect me to the 'Edit' form to change the desired information
+THEN it will redirect me to the 'Edit' form to change the desired information & pill identifiers
 WHEN I click on the various dropdown menus to select the appropriate type, color, shape & imprint
 THEN I am able to submit the newly entered information & compare it to existing data posted by other users
 ```
@@ -55,7 +56,7 @@ THEN I am able to submit the newly entered information & compare it to existing 
 ----
 > **Important:** Once, the source code has been cloned from the repository @https://github.com/AASports89/pill-git-it:
 
- Enter the following:
+ Enter the following to initiate the app configuration & installation process:
 
  ```
  npm i express
