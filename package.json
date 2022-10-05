@@ -1,7 +1,7 @@
 {
   "name": "pill-git-it",
   "version": "1.0.0",
-  "description": "Project 2 Starter",
+  "description": "A user run pill/medication identification blog data web application powered by Express.js, Handlebars, Sequelize, MySQL & Dotenv.",
   "main": "server.js",
   "scripts": {
     "start": "node server.js",

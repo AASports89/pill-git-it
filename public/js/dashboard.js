@@ -1,12 +1,13 @@
+let photo_Url = "";
 const submitPostHandler = async (event) => {
     event.preventDefault();
-
-    const title = document.querySelector(".subject-input");
-    const photo_Url = cloudinary.createUploadWidget(document.querySelector("#photo_Url-input"));
-    const type = document.querySelector("#type-input");
-    const color = document.querySelector("#color-input");
-    const imprint = document.querySelector("#imprint-input");
-    const shape = document.querySelector("#description-input");
+   console.log(photo_Url);
+    const title = document.querySelector(".subject-input").value;
+    
+    const type = document.querySelector("#type-input").value;
+    const color = document.querySelector("#color-input").value;
+    const imprint = document.querySelector("#imprint-input").value;
+    const shape = document.querySelector("#description-input").value;
     const author_id = document.querySelector(".logged-in-user-id").innerHTML;
 
     if (!author_id) {
@@ -65,3 +66,15 @@ const deleteButtons = document.querySelectorAll(".delete-post");
 deleteButtons.forEach((el) =>
     el.addEventListener("click", (event) => deletePostHandler(event))
 );
+var myWidget = cloudinary.createUploadWidget({
+    cloudName: 'dhqsixgmo', 
+      uploadPreset: 'dpfyatxo'}, (error, result) => { 
+      if (!error && result && result.event === "success") { 
+          console.log('Done! Here is the image info: ', result.info); 
+          photo_Url=result.info.url
+          console.log(photo_Url);
+        }
+      })
+document.getElementById("upload_widget").addEventListener("click", function(){
+myWidget.open();
+}, false);
