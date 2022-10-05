@@ -4,10 +4,7 @@
   "description": "A user run pill/medication identification blog data web application powered by Express.js, Handlebars, Sequelize, MySQL & Dotenv.",
   "main": "server.js",
   "scripts": {
-    "start": "node server.js",
-    "lint": "eslint --quiet .",
-    "fix": "eslint --fix .",
-    "test": "npm run lint && cross-env NODE_ENV=test mocha -u tdd --reporter spec --exit"
+    "start": "node server.js"
   },
   "license": "ISC",
   "dependencies": {
@@ -28,16 +25,6 @@
     "mysql2": "^2.3.3",
     "sequelize": "^6.23.2"
   },
-  "devDependencies": {
-    "chai": "^4.2.0",
-    "chai-http": "^4.3.0",
-    "cross-env": "^5.2.0",
-    "eslint": "^5.16.0",
-    "eslint-config-prettier": "^4.3.0",
-    "eslint-plugin-prettier": "^3.1.0",
-    "mocha": "^6.1.4",
-    "prettier": "^1.19.1"
-  },
   "directories": {
     "test": "test"
   },
@@ -46,7 +33,7 @@
     "url": "git+https://github.com/AASports89/pill-git-it.git"
   },
   "keywords": [],
-  "author": "",
+  "author": "Group 3 - Chill-Pillz",
   "bugs": {
     "url": "https://github.com/AASports89/pill-git-it/issues"
   },

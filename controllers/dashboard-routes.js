@@ -11,6 +11,7 @@ router.get("/", withAuth, async (req, res) => {
                     attributes: ["id", "username"],
                 },
             ],
+//ORGANIZED BASED ON DATE & TIME STAMP//
             order: [["createdAt", "DESC"]],
         });
 

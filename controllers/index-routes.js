@@ -6,7 +6,7 @@ const User = require("../models/User");
 router.get("/", async (req, res) => {
     try {
         const postData = await Post.findAll({
-            //joins table
+//JOINS TABLES --> POST + USER//
             include: [
                 {
                     model: User,

@@ -7,6 +7,8 @@
 
 **'Pill Git It'** features pill identification function via user shared data in the form of various medication names, types, colors, imprints and images. User are able to create an account in order to view the medication data and share various information in the form of a "blog post" system. Additionally, users have the ability to edit their posts & comment on other user's posts in order to ensure data accuracy and growth.
 
+Overall, **'Pill Git It'** follows the ```MVC``` outline referencing "full-stack" development with a JavaScript powered "back-end" and a dynamic "front-end" set up by ```Handlebars```. All of these combined languages and processes create the unique user experience while visiting the application's pages deployed via ```Heroku```. 
+
 ## Table of Contents
 ---
 
@@ -82,7 +84,7 @@ THEN I am able to submit the newly entered information & compare it to existing 
  ```
  node server.js
  ```
- in the terminal cmd to install & run locally:
+ in the terminal cmd to install & run locally via PORT 3001.
 
 ## Mock-Up
 ---
@@ -115,7 +117,43 @@ https://github.com/AASports89/pill-git-it
 
 > **Note**: The following evaluation guideline is used to determine if ***'Pill Git It'** meets the requirements for a minimum viable product:
 ```
-INSERT EVALUATION GUIDELINE HERE
+### Deliverables: 10%
+
+* The GitHub repository containing your application code.
+
+### Presentation & App Demo: 37%
+
+*The presentation should encompass the entire process of developing the application, from planning to final product in a concise yet detailed fashion.
+
+*During the demonstration, the application should be able to process basic user routes retrieving and modifying relevant data.
+
+### Technical Acceptance Criteria: 40%
+
+* Satisfies all of the preceding acceptance criteria plus the following:
+
+  * Connects to a MySQL database using the [MySQL2](https://www.npmjs.com/package/mysql) and [Sequelize](https://www.npmjs.com/package/sequelize) packages.
+
+  * Stores sensitive data, like a user’s MySQL username, password, and database name, using environment variables through the [dotenv](https://www.npmjs.com/package/dotenv) package.
+
+  *JAWS_DB is employed via Heroku to run the application server without masked credentials and server address ran through Heroku.
+
+  * Syncs Sequelize models to a MySQL database on the server start.
+
+  * Includes column definitions for all four models outlined in the Challenge instructions.
+
+  * Includes model associations outlined in the Challenge instructions.
+
+### Repository Quality: 13%
+
+* Repository has a unique name.
+
+* Repository follows best practices for file structure and naming conventions.
+
+* Repository follows best practices for class/id naming conventions, indentation, quality comments, etc.
+
+* Repository contains multiple descriptive commit messages.
+
+* Repository contains quality readme with description and a link to the deployed application webpaged based in Heroku.
 ```
 
 ## Questions

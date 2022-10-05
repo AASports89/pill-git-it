@@ -1,9 +1,9 @@
-let photo_Url = "";
+    let photo_Url = "";
 const submitPostHandler = async (event) => {
     event.preventDefault();
-   console.log(photo_Url);
-    const title = document.querySelector(".subject-input").value;
-    
+        console.log(photo_Url);
+
+    const title = document.querySelector(".subject-input").value; 
     const type = document.querySelector("#type-input").value;
     const color = document.querySelector("#color-input").value;
     const imprint = document.querySelector("#imprint-input").value;
@@ -66,6 +66,7 @@ const deleteButtons = document.querySelectorAll(".delete-post");
 deleteButtons.forEach((el) =>
     el.addEventListener("click", (event) => deletePostHandler(event))
 );
+//CLOUDIARY WIDGET --> IMAGE UPLOAD VIA URL//
 var myWidget = cloudinary.createUploadWidget({
     cloudName: 'dhqsixgmo', 
       uploadPreset: 'dpfyatxo'}, (error, result) => { 
