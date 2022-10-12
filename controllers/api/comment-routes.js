@@ -5,10 +5,10 @@ const { Comment } = require("../../models");
 router.post("/", async (req, res) => {
     try {
         const dbCommentData = await Comment.create({
-          photo_Url: req.body.photo_Url,
-          comment: req.body.comment,
-          post_id: req.body.post_id,
-          author_id: req.body.author_id,
+            comment: req.body.comment,
+            photo_Url: req.body.photo_Url,
+            post_id: req.body.post_id,
+            author_id: req.body.author_id,
         });
         return res.status(200).json(dbCommentData);
     } catch (err) {

@@ -355,6 +355,7 @@ td {
 }
 
 #footer {
+  border-top: 1px solid black;
   height: 20%;
   font-size: 125%;
   background-image: linear-gradient(rgb(235, 237, 244) 0%, rgb(65, 65, 69) 100%);

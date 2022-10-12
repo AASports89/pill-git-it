@@ -44,4 +44,11 @@ format_summary: (shape) => {
       return shape;
   }
 },
+format_summary: (comment) => {
+    if (comment.length > 300) {
+        return comment.substring(0, 300) + "...";
+    } else {
+        return comment;
+    }
+  },
 };

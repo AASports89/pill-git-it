@@ -1,33 +1,35 @@
+//DEPENDENCY & IMPORT//
 const router = require("express").Router();
 const Post = require("../models/Post");
 const User = require("../models/User");
 const Comment = require("../models/Comment");
 
-//ON PAGE LOAD RENDER POST DATA --> TRIMMED VIA HELPER FORMATTING//
+//RENDER HANDLEBARS --> LOAD HTML POST --> TRIMMED SUMMARY VIA UTIL HELPER//
 router.get("/:id", async (req, res) => {
     try {
         const postData = await Post.findOne({
             where: {
-                id: req.params.id,
+            id: req.params.id,
             },
             include: [
-                {
-                    model: Comment,
-                
-                    include: [
-                        {
-                            model: User,
-                        },
-                    ],
-                },
-                {
-                    model: User,
-                    attributes: ["id", "username"],
-                },
-            ],
-        });
+            {
+                model: Comment,
+//JOIN TO USER + POST//
+                include: [
+                    {
+                        model: User,
+                        attributes: ["id", "username"],
+                    },
+                ],
+            },
+            {
+                model: User,
+                attributes: ["id", "username"],
+            },
+        ],
+    });
         const post = postData.get({ plain: true });
-        console.log(post);
+            console.log(post);
         if (post) {
             res.render("post", {
                 loggedIn: req.session.loggedIn,
@@ -37,8 +39,8 @@ router.get("/:id", async (req, res) => {
         } else {
             res.redirect("/");
         }
-    } catch (err) {
-        res.status(500).json(err);
+        } catch (err) {
+            res.status(500).json(err);
     }
 });
 

@@ -14,7 +14,10 @@ Comment.init(
         photo_Url: {
           type: DataTypes.STRING,
           allowNull: false,
-        
+        },
+        comment: {
+          type: DataTypes.STRING,
+          allowNull: false,
         },
         author_id: {
           type: DataTypes.INTEGER,

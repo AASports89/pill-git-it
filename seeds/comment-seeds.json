@@ -1,8 +1,14 @@
 [
   {
     "photo_Url":  "https://res.cloudinary.com/dhqsixgmo/image/upload/v1664851514/pill-git-it-images/white-tab_m8srwd.jpg",
-   "comment": "What is this?",
+    "comment": "What is this?",
     "author_id": 1,
+    "post_id": 1
+  },
+  {
+    "photo_Url":  "https://res.cloudinary.com/dhqsixgmo/image/upload/v1664851514/pill-git-it-images/pink-cap_p1h2bf.jpg",
+    "comment": "Why type of pill is this?",
+    "author_id": 2,
     "post_id": 1
   }
 
