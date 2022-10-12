@@ -15,6 +15,10 @@
   box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
 }
 
+#photo_Url {
+  border: 1px solid black;
+  border-radius: 0.25em;
+}
 
 #inline_container {
   max-height: auto;
@@ -53,9 +57,10 @@ text-decoration: none;
   transition: all 0.3s ease-in-out;
 }
 
-#sum a {
+#sum {
   text-decoration: none;
   padding-bottom: 3%;
+  padding-top: 3%;
   font-weight: bold;
 }
 
@@ -84,7 +89,7 @@ h2 {
 }
 
 h6 {
-    text-align: center;
+  text-align: center;
   font-weight: bold;
   color: black;
   padding-bottom: 5%;
@@ -146,8 +151,8 @@ html {
 #homelogo {
   border-radius: 1em; 
   border: 2px solid black; 
-  width: 50%;
-  box-shadow: 0 8px 5px 0 rgb(2, 2, 130), 0 5px 3px 0 rgb(1, 1, 82);
+  width: 40%;
+  box-shadow: 0 3px 5px 0 rgb(52, 52, 54), 0 5px 5px 0 rgb(45, 45, 46);
 }
 
 #logo1 {
@@ -358,5 +363,7 @@ td {
   border-top: 1px solid black;
   height: 20%;
   font-size: 125%;
-  background-image: linear-gradient(rgb(235, 237, 244) 0%, rgb(65, 65, 69) 100%);
+  border-radius: 0.5em;
+  background-image: linear-gradient(rgb(114, 115, 120) 0%, rgb(206, 206, 216) 100%);
+  box-shadow: 8px 0 0 5px rgb(2, 2, 130), 5px 0 3px 0 rgb(1, 1, 82);
 }

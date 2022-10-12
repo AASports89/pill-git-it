@@ -1,8 +1,8 @@
 {{!------------------------------------ HOMEPAGE IMAGE ---------------------------------------}}
         <div class="columns is-centered">
-          <div class="column is-8 is-offset-4">
-            <div class="card-img-top">
-              <img id="homelogo" src="https://res.cloudinary.com/dhqsixgmo/image/upload/v1665535400/pill-git-it-images/cooltext421229855588525_uheir4.png"/>
+          <div class="column is-8 is-offset-5">
+            <div class="card-img-top"></div>
+              <img id="homelogo" src="https://res.cloudinary.com/dhqsixgmo/image/upload/v1665549054/pill-git-it-images/pill-git-title_f6xuoy.png"/>
             </div>
           </div>
         </div>
@@ -14,12 +14,13 @@
         <div class="columns">
           <div class="column is-8 is-offset-2" style="padding-top: 5%">
             <div class="card" style="width: 100%; padding-top: 3%; text-align: center">
-                <h2 class="subtitle is-4">{{format_date posts.0.0.createdAt}}</h2>
-                <h1 id="sum" class="title"><a href="/post/{{posts.0.0.id}}">{{posts.0.0.title}}</a></h1>
+                
+                <h1 id="sum"><a id="sum" href="/post/{{posts.0.0.id}}">{{posts.0.0.title}}</a></h1>
+                <h2 id="h2" class="subtitle is-4">{{format_date posts.0.0.createdAt}}</h2>
                 <h6>By: {{posts.0.0.user.username}}</h6>
-                <img style="border: dashed 1.25px black" id="photo_Url" src="{{posts.0.0.photo_Url}}">
+                <img id="photo_Url" src="{{posts.0.0.photo_Url}}">
                 <div class="card-body">
-                <ul>
+                <ul id="body">
                   <p class="card-text"><strong>Type:</strong> {{posts.0.0.type}}</p>
                   <p class="card-text"><strong>Color:</strong> {{posts.0.0.color}}</p>
                   <p class="card-text"><strong>Imprint:</strong> {{posts.0.0.imprint}}</p>
