@@ -15,7 +15,7 @@ Post.init(
             type: DataTypes.STRING,
             allowNull: false,
         },
-        photo_Url: {
+          photo_Url: {
           type: DataTypes.STRING(1000),
           allowNull: false,
         },

@@ -1,24 +1,30 @@
-<section class="hero has-background-grey-lighter is-medium">
+<section class="hero">
     <div class="hero-body">
         <div class="container">
             <div class="columns is-centered">
                 <div class="column is-5-tablet is-4-desktop is-3-widescreen">
                     <form class="box">
                         <div class="field">
-                            <label class="label">Email 📧 or Username 🧑‍🦲</label>
+                            <label class="label">Email 📧</label>
                             <div class="control has-icons-left">
-                                <input type="email" placeholder="e.g. bobsmith@gmail.com"
-                                    class="input username-input" required/>
+                                <input
+                                    type="email" placeholder="e.g. dr.evil@gmail.com" class="input email-input" required/>
                                 <span class="icon is-small is-left">
                                     <i class="fa fa-envelope"></i>
                                 </span>
                             </div>
                         </div>
                         <div class="field">
+                            <label class="label">Username 🧑‍🦲</label>
+                            <div class="control has-icons-left">
+                                <input type="text" placeholder=" e.g. SouthParkFan" class="input username-input" required/>
+                                <span class="icon is smal is-left"><i class="fa fa-user"></i></span>
+                            </div>
+                        </div>
+                           <div class="field">
                             <label class="label">Password 🔐</label>
                             <div class="control has-icons-left">
-                                <input type="password" placeholder="*******" class="input password-input"
-                                    required/>
+                                <input type="password" placeholder="*******" class="input password-input" required/>
                                 <span class="icon is-small is-left">
                                     <i class="fa fa-lock"></i>
                                 </span>
@@ -26,12 +32,12 @@
                         </div>
                         <div class="field is-grouped is-grouped-right">
                             <p class="control">
-                                <a class="button is-info" href="/signup/">
-                                    Sign Up 🖊️
+                                <a id="signup-btn" class="button is-info" href="/signup/">
+                                    Sign Up 📡
                                 </a>
                             </p>
                             <p class="control login-button">
-                                <a class="button is-success">
+                                <a id="login-btn" class="button is-success">
                                     Login ✅
                                 </a>
                             </p>

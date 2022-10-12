@@ -91,6 +91,13 @@ THEN I am able to submit the newly entered information & compare it to existing 
 ---
 > **Note:**  The following animation shows the application's look and functionality:
 
+> **Important:** Use the following credentials to login as 'Admin', to view additional features:
+```
+Username: "Admin"
+Email: "admin@gmail.com"
+Password: "test123"
+```
+
 > **Application Look:** !["**'Pill Git It'** features numerous pages designed for various medication data storage & modication as demonstrated in the following GIF."](./seeds/images/pill-git-it.gif)
 
 > **Dashboard:** !["The user has access to a dashboard tool that organizes all of the user associated data & renders easy access."](./seeds/images/dashboard.png)
@@ -101,7 +108,7 @@ THEN I am able to submit the newly entered information & compare it to existing 
 
 > **Data Modification:** !["**'Pill Git It'** offers the user the ability to access & modify pill related data through various routes."](./seeds/images/data-modification.png)
 
-> **Image Uploads:** !["The user has the ability to upload all types of images whether local or third party via the ```Cloudinary``` Upload Widget."](./seeds/images/upload-image.png)
+> **Image Uploads:** !["The user has the ability to upload all types of images whether local or third party via the ```Cloudinary``` Upload Widget."](./seeds/images/image-upload.png)
 
 ## Deployed Application
 ---

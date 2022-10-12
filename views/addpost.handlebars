@@ -1,0 +1,126 @@
+{{!-- ***************************************************** USER DASHBOARD VIEW *************************************************** --}}
+<section class="hero has-background-grey-lighter">
+    <div class="hero-body">
+        <div class="container">
+             <label class="label is-large" id="addpost" class="label">Create New Post ⌨️</label>
+            <div class="columns is-centered">
+                <div class="column">
+                    <form class="box">
+                        <label class="label" style="border-bottom: 1px dashed black; margin-bottom: 3%; text-align: center; font-size: 125%">Content 🗄️</label>
+                        <div class="field">
+                            <label class="label" style="margin-top: 2.5%; margin-bottom: 1%">Upload Image 🎞️:</label>
+                            <div class="control">
+                                <div id="inline_container"></div>
+                            </div>
+                        </div>
+                        <div class="field">
+                            <label class="label" style="border-bottom: 1px dashed black">Subject / Title 🗃️</label>
+                            <div class="control">
+                               <div class="control" style="margin-top: 2.5%">
+                                    <input type="text" placeholder="www.ssh.com...Blog Git before you even start...📢" 
+                                class="input subject-input" >
+                            </div>
+                        </div>
+                        <div class="field-body">
+                            <div class="field" style="margin-top: 3%">
+                                <div class="control">
+                                    <label class="label">Content 📢:</label>
+                                      <div class="container">
+                <div class="row content-input">
+                <div class="col">
+            <div style="padding: 2%" class="form-group dropdown">
+                <label style="font-weight: bold; color: black; font-size: 115%" for="type" value="">Type 🧪:</label>
+                <select style="font-size: 110%" class="form-control" id="type-input" name="type">
+                    <option>select...</option>
+                    <option>capsule</option>
+                    <option>tablet</option>
+                    <option>caplet</option>
+                    <option>gelcap</option>
+                </select>
+            </div>
+            <div style="padding: 2%" class="form-group dropdown">
+                <label style="font-weight: bold; color: black; font-size: 115%" for="color" value="">Color 🩸:</label>
+                <select style="font-size: 110%" class="form-control" id="color-input" name="color">
+                    <option>select...</option>
+                    <option>white</option>
+                    <option>blue</option>
+                    <option>yellow</option>
+                    <option>red</option>
+                    <option>pink</option>
+                    <option>orange</option>
+                </select>
+            </div>
+            <div style="padding: 2%" class="form-group dropdown">
+                <label style="font-weight: bold; color: black; font-size: 115%" for="shape" value="">Shape 🔬:</label>
+                <select style="font-size: 110%" class="form-control" id="description-input" name="shape">
+                    <option>select...</option>
+                    <option>round</option>
+                    <option>oblong</option>
+                    <option>oval</option>
+                    <option>rectangular</option>
+                    <option>triangular</option>
+                </select>
+            </div>
+        <div style="padding: 2%" class="form-group dropdown">
+                <label style="padding-bottom: 1%; font-weight: bold; color: black; font-size: 115%" for="imprint" value="">Imprint 🖨️:</label>
+                    <textarea style="font-size: 100%" name="imprint" id="imprint-input" width="10%" placeholder="Enter pill imprint here..."></textarea>
+        </input>
+        </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="field is-grouped is-grouped-right mt-3">
+                            <button id="dash-submit" class="button is-success submit-post">
+                               Submit 📬
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section id="user-dash" class="hero has-background-grey-lighter hug">
+    <label class="label" style="border-bottom: 1px solid black; margin-bottom: 3%; text-align: center; font-size: 200%">User Dashboard 🎛️</label>
+    <div class="hero-body">
+        <div class="container">
+            <div class="columns is-centered">
+                <div class="column">
+{{!--------------------------------------------- DASHBOARD TABLE -------------------------------------------}}
+                    <form id="dash-box" class="box">
+                        <table id="table-dash">
+                            <thead>
+                                <tr id="dash-table">
+                                    <th class="table-id">ID 📇</th>
+                                    <th class="table-title">Title 📚</th>
+                                    <th class="table-created">Date/Time 🗓️</th>
+                                    <th class="table-edit">Edit ✍️</th>
+                                    <th class="table-delete">Delete ❌</th>
+                                </tr>
+                            </thead>
+
+                            <tbody>
+                                {{#each post}}
+                                    <tr id="table-row">
+                                        <td>{{id}}</td>
+                                        <td>
+                                            <a href="/post/{{id}}">{{title}}</a>
+                                        </td>
+                                        <td>{{format_date createdAt}}</td>
+                                        <td id="editt">
+                                            <a id="edit" href="/useredit/{{this.id}}">✍️</a>
+                                        </td>
+                                        <td id="delete">
+                                            <a class="delete-post" id="delete-post" data-id="{{this.id}}">❌</a>
+                                        </td>
+                                    </tr>
+                                {{/each}}
+                            </tbody>
+                        </table>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+ <script src="/js/add-post.js"></script>

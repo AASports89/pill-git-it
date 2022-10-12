@@ -5,87 +5,52 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <meta http-equiv="X-UA-Compatible" content="ie=edge" />
         <title>Pill Git It 💊</title>
-        <link rel="stylesheet" href="https://unpkg.com/bulma@0.9.0/css/bulma.min.css"/>
-        <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
-            rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous"/>
-        <link rel="stylesheet" href="../css/bulma-divider.css" />
+          <link rel="stylesheet" href="https://unpkg.com/bulma@0.9.0/css/bulma.min.css"/>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" />
         <link rel="stylesheet" href="../css/style.css" />
+        <link rel="stylesheet" href="../css/bulma-divider.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"/>
+        <script src="https://upload-widget.cloudinary.com/global/all.js" type="text/javascript"></script>
         <script src="../js/config/apiConfig.js"></script>
     </head>
     <body>
-        <!-- START NAV -->
-        <nav style="border-bottom: 2px dashed black" class="navbar">
-            <div class="container">
-                <div class="navbar-brand">
-                    <a class="navbar-item" href="/">
-                    <img class="main logo" src="https://res.cloudinary.com/dhqsixgmo/image/upload/v1664934483/pill-git-it-images/title_of8vh7.png" alt="Pill Git It">
-                        <img
-                            class="main-logo"
-                            src="https://res.cloudinary.com/dhqsixgmo/image/upload/v1664851515/pill-git-it-images/th-1_ws6trk.jpg"
-                            alt="Pill-Git-It"
-                        />
-                    </a>
-                    <span class="navbar-burger burger" data-target="navbarMenu">
-                        <span></span>
-                        <span></span>
-                        <span></span>
-                    </span>
-                </div>
-                <div id="navbarMenu" class="navbar-menu">
-                    <div class="navbar-end">
-                        <a
-                            class="navbar-item is-active is-size-5 has-text-weight-semibold"
-                            href="/"
-                        >
-                           🏠 Home 
-                        </a>
-                        {{#if loggedIn}}
-                            {{#if loggedInUserData.isAdmin}}
-                                <a
-                                    class="navbar-item is-size-5 has-text-weight-semibold" style="color: black"
-                                    href="/dashboard"
-                                >
-                                🎛️ Dashboard
-                                </a>
-                            {{/if}}
-                            <a
-                                class="navbar-item is-size-5 has-text-weight-semibold" style="color: black"
-                                href="/logout/"
-                            >
-                                Logout ❌
-                            </a>
-                        {{else}}
-                            <a
-                                class="navbar-item is-size-5 has-text-weight-semibold"
-                                href="/login/"
-                            >
-                                Login 🔐
-                            </a>
-                            <a
-                                class="navbar-item is-size-5 has-text-weight-semibold"
-                                href="/signup/"
-                            >
-                                Sign Up ⚙️
-                            </a>
-                        {{/if}}
-                    </div>
-                </div>
-            </div>
-        </nav>
-        <!-- END NAV -->
+        {{!------------------------------ NAVBAR-START --------------------------}}
+    <div class="row" id="navirow">
+        <div class="col-5">
+            <a class="navbar-brand" style="text-decoration: none" href="/">
+                <img id="logo1" src="https://res.cloudinary.com/dhqsixgmo/image/upload/v1664935175/pill-git-it-images/title-logo_o7quzy.jpg"/>
+            </a>
+        </div>
+        <div class="col-7" id="navbarMenu">
+                <a  class="btn btn-primary" href="/">Home 🏠</a>   
+            
+            {{#if loggedInUserData}}
+                <a class="btn btn-primary" href="/addpost">Create Post 💻</a>
+
+            {{#if loggedInUserData.isAdmin}}
+         
+                <a class="btn btn-primary" href="/dashboard"> Dashboard ⚙️</a>
+            {{/if}}
+
+                 <a class="btn btn-primary" href="/logout/">Logout 🚫</a>
+          
+            {{else}}
+                <a class="btn btn-primary" href="/login/">Login ✅</a>
+    
+                <a class="btn btn-primary" href="/signup/">Sign Up 📡</a>
+            {{/if}}
+        </div>
+    </div>
+{{!------------------------------- NAVBAR-END ------------------------------}}
         {{{body}}}
-        <footer style="background-image: linear-gradient(
-    rgb(55, 98, 250) 0%,
-    rgb(4, 4, 120) 100%)" class="footer">
-            <div style="border-top: 2px dashed whitesmoke" class="content has-text-centered">
-                <p style="margin-top: 7.5%; font-size: 175%">
+{{!-------------------------------- FOOTER ---------------------------------}}
+<footer style="padding-top: 5%" id="footer">
+            <div class="content has-text-centered">
+                <p>
                     <strong style="color: whitesmoke">* Open Source - ChillPillz 💊 Copyright © 2022 *</strong>
                 </p>
             </div>
-            <div
-                class="logged-in-user-id is-invisible"
-            >{{loggedInUserData.id}}</div>
-        </footer>
-        <script src="/js/main.js"></script>
-    </body>
+            <div class="logged-in-user-id is-invisible">{{loggedInUserData.id}}</div>
+</footer>
+ <script src="/js/main.js"></script>
 </html>

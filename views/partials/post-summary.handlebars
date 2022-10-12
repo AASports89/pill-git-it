@@ -1,13 +1,13 @@
 <section class="section">
-    <div class="row">
     <div class="columns is-variable is-8">
         <div class="column is-5 is-offset-1">
-            <div class="content is-medium">
-                
-                <h1 class="title has-text-black is-3"><a href="/post/{{0.id}}">{{0.title}}</a></h1>
+            <div class="card">
+                <h1 id="sum"><a href="/post/{{0.id}}">{{0.title}}</a></h1>
                     <h2 class="subtitle is-5 has-text-grey">{{format_date 0.createdAt}}</h2>
-        <img style="border: dashed 1px black" id="photo_Url" src="{{format_summary 0.photo_Url}}">
-                <ul>
+                    <h6>By: {{0.user.username}}</h6>
+        <img style="border: dashed 1px black" id="sum-img" src="{{format_summary 0.photo_Url}}">
+        <div class="card-body">
+                <ul id="body">
                     <p>Type: {{format_summary 0.type}}</p>
                     <p>Color: {{format_summary 0.color}}</p>
                     <p>Imprint: {{format_summary 0.imprint}}</p>
@@ -15,20 +15,24 @@
                 </ul>
             </div>
         </div>
+        </div>
       
         {{#if 1.title}}
             <div class="column is-5">
-                <div class="content is-medium">
-                    <h1 class="title has-text-black is-3"><a href="/post/{{1.id}}">{{1.title}}</a></h1>
+               <div class="card">
+                    <h1 id="sum" ><a href="/post/{{1.id}}">{{1.title}}</a></h1>
                     <h2 class="subtitle is-5 has-text-grey">{{format_date 1.createdAt}}</h2>
-            <img style="border: dashed 1px black" id="photo_Url" src="{{format_summary 1.photo_Url}}">
-                <ul class="has-text-dark">
+                    <h6>By: {{1.user.username}}</h6>
+            <img id="sum-img" style="border: dashed 1px black" id="photo_Url" src="{{format_summary 1.photo_Url}}">
+            <div class="card-body">
+                <ul id="body">
                     <p>Type: {{format_summary 1.type}}</p>
                     <p>Color: {{format_summary 1.color}}</p>
                     <p>Imprint: {{format_summary 1.imprint}}</p>
                     <p>Shape: {{format_summary 1.shape}}</p>
                 </ul>
                 </div>
+            </div>
             </div>
         {{/if}}
     </div>

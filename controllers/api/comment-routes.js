@@ -6,10 +6,7 @@ router.post("/", async (req, res) => {
     try {
         const dbCommentData = await Comment.create({
           photo_Url: req.body.photo_Url,
-          type: req.body.type,
-          color: req.body.color,
-          imprint: req.body.imprint,
-          shape: req.body.shape,
+          comment: req.body.comment,
           post_id: req.body.post_id,
           author_id: req.body.author_id,
         });

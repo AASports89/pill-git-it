@@ -14,22 +14,7 @@ Comment.init(
         photo_Url: {
           type: DataTypes.STRING,
           allowNull: false,
-        },
-        type: {
-          type: DataTypes.STRING,
-          allowNull: false,
-        },
-        color: {
-          type: DataTypes.STRING,
-          allowNull: false,
-        },
-        imprint: {
-          type: DataTypes.STRING,
-          allowNull: false,
-        },
-        shape: {
-          type: DataTypes.STRING,
-          allowNull: false,
+        
         },
         author_id: {
           type: DataTypes.INTEGER,

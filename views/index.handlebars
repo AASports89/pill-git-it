@@ -1,38 +1,41 @@
-<section class="hero ">
-    <div class="hero-body">
-      <div class="container">
-        <div class="columns">
-          <div class="column is-8 is-offset-2">
-          
-              <a href="/dashboard"><img style="border: solid 1.5px black; margin-left: 20%; width: 60%; border-radius: 0.5em" 
-              src="https://res.cloudinary.com/dhqsixgmo/image/upload/v1664935175/pill-git-it-images/title-logo_o7quzy.jpg" 
-              alt="photo_Url"></a>
+{{!------------------------------------ HOMEPAGE IMAGE ---------------------------------------}}
+        <div class="columns is-centered">
+          <div class="column is-8 is-offset-4">
+            <div class="card-img-top">
+              <img id="homelogo" src="https://res.cloudinary.com/dhqsixgmo/image/upload/v1665535400/pill-git-it-images/cooltext421229855588525_uheir4.png"/>
+            </div>
           </div>
         </div>
 {{!--------------------------- HOMEPAGE SUMMARY SECTION W/ ALL USER POST DATA & IMAGES -----------------------------------}}
-        <section class="section">
-          <div class="columns">
-            <div class="column is-8 is-offset-2">
-              <div class="content is-medium">
+<section class="hero">
+  <div class="hero-body">
+    <div class="container">
+      <section class="section">
+        <div class="columns">
+          <div class="column is-8 is-offset-2" style="padding-top: 5%">
+            <div class="card" style="width: 100%; padding-top: 3%; text-align: center">
                 <h2 class="subtitle is-4">{{format_date posts.0.0.createdAt}}</h2>
-                <h1 class="title"><a href="/post/{{posts.0.0.id}}">{{posts.0.0.title}}</a></h1>
-                <h6>by {{posts.0.0.user.username}}</h6>
+                <h1 id="sum" class="title"><a href="/post/{{posts.0.0.id}}">{{posts.0.0.title}}</a></h1>
+                <h6>By: {{posts.0.0.user.username}}</h6>
                 <img style="border: dashed 1.25px black" id="photo_Url" src="{{posts.0.0.photo_Url}}">
+                <div class="card-body">
                 <ul>
-                  <p><strong>Type:</strong> {{posts.0.0.type}}</p>
-                  <p><strong>Color:</strong> {{posts.0.0.color}}</p>
-                  <p><strong>Imprint:</strong> {{posts.0.0.imprint}}</p>
-                  <p><strong>Shape:</strong> {{posts.0.0.shape}}</p>
+                  <p class="card-text"><strong>Type:</strong> {{posts.0.0.type}}</p>
+                  <p class="card-text"><strong>Color:</strong> {{posts.0.0.color}}</p>
+                  <p class="card-text"><strong>Imprint:</strong> {{posts.0.0.imprint}}</p>
+                  <p class="card-text"><strong>Shape:</strong> {{posts.0.0.shape}}</p>
                 </ul>
               </div>
-            </div>
           </div>
-        </section>
+        </div>
+      </div>
+    </section>
+{{!------------------------------------ *END* POST SPACE *END* ----------------------------------}}
         <div class="is-divider"></div>
       </div>
     </div>
   </section>
-{{!-- AREA FOR ARTICLES --}}
+  {{!--------------------------------------------- POST MAP ----------------------------------------------}}
   <section class="hero ">
     <div class="hero-body-neg">
       <div class="container">
@@ -46,4 +49,4 @@
       </div>
     </div>
   </section>
-  <script src='/js/index.js'></script>
+  <script src='/js/main.js'></script>
