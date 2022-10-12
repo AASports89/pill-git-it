@@ -17,6 +17,7 @@ Overall, **'Pill Git It'** follows the ```MVC``` outline referencing "full-stack
   * [Acceptance Criteria](#acceptance-criteria)
   * [Installation](#installation)
   * [Mock Up](#mock-up)
+  * [Contributions](#contributions)
   * [Deployed Application](#deployed-application)
   * [GitHUB Repository](#github-repository)
   * [Evaluation Guideline](#evaluation-guideline)
@@ -97,7 +98,6 @@ Username: "Admin"
 Email: "admin@gmail.com"
 Password: "test123"
 ```
-
 > **Application Look:** !["**'Pill Git It'** features numerous pages designed for various medication data storage & modication as demonstrated in the following GIF."](./seeds/images/pill-git-it.gif)
 
 > **Dashboard:** !["The user has access to a dashboard tool that organizes all of the user associated data & renders easy access."](./seeds/images/dashboard.png)
@@ -110,6 +110,14 @@ Password: "test123"
 
 > **Image Uploads:** !["The user has the ability to upload all types of images whether local or third party via the ```Cloudinary``` Upload Widget."](./seeds/images/image-upload.png)
 
+## Contributions
+---
+* Aram - coded file-pathways, ```API``` call routes & controllers for the "back-end"
+* Averi - coded models for ```Comment```, ```Post``` & ```Index```
+* Rence - coded, linked ```Handlebar``` views for the client-side ("front-end")
+* Sean - coded/created drop-down menus for pill-data & data submit forms
+* Collectively - worked on unifying all ```JavaScript``` from routes --> controllers --> public (client-sde
+)
 ## Deployed Application
 ---
 
