@@ -49,6 +49,7 @@ h1 {
 
 #title a {
 text-decoration: none;
+font-size: 125%;
 }
 
 #title a:hover {
@@ -62,6 +63,7 @@ text-decoration: none;
   padding-bottom: 3%;
   padding-top: 3%;
   font-weight: bold;
+  font-size: 125%;
 }
 
 #sum a:hover {
