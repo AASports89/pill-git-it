@@ -21,6 +21,8 @@ const submitPostHandler = async (event) => {
             });
             if (response.ok) {
                 document.location.replace("/dashboard");
+                                +
+                alert(`Success✅ Data posted❕✍`);
             } else {
                 alert(
                     "Failed to create post❗⛔ Please try again❗⛔" +

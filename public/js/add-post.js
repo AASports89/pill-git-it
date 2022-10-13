@@ -20,7 +20,9 @@ const submitPostHandler = async (event) => {
                 headers: { "Content-Type": "application/json" },
             });
             if (response.ok) {
-                document.location.replace("/dashboard");
+                document.location.replace("/addpost");
+                                +
+                alert(`Success✅ Data posted❕✍`);
             } else {
                 alert(
                     "Failed to create post❗⛔ Please try again❗⛔" +
