@@ -110,9 +110,11 @@ Password: "test123"
 
 > **Image Uploads:** !["The user has the ability to upload all types of images whether local or third party via the ```Cloudinary``` Upload Widget."](./seeds/images/image-upload.png)
 
+> **Pill-Image Matching:** !["The user has the ability to match pill-images by entering data parameters using dropdown menus as displayed in the following GIF:"](./seeds/images/pill-match.gif)
+
 ## Contributions
 ---
-* Aram - coded file-pathways, ```API``` call routes & controllers for the "back-end"
+* Aram - coded file-pathways, ```API``` call routes, controllers for the "back-end" & created 'Pill-Image Match' tool.
 * Averi - coded models for ```Comment```, ```Post``` & ```Index```
 * Rence - coded, linked ```Handlebar``` views for the client-side ("front-end")
 * Sean - coded/created drop-down menus for pill-data & data submit forms
