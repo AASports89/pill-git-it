@@ -31,7 +31,6 @@ const photo_Url = "";
       }
   }
 };
-
 //DELETE COMMENT ON CLIENT API CALL//
 const deleteCommentHandler = async (event) => {
   event.preventDefault();
@@ -60,7 +59,74 @@ const deleteCommentHandler = async (event) => {
       }
   }
 };
+//************************************** PILL IMAGE MATCH *************************************//
+//STORES OBJECTS FOR THE TRIPLE-LIST CASCADE//
+var SList = new Object();
 
+//LABELS FOR THE 2ND & 3RD LISTS//
+var txtsl2 ='Color 🩸:';
+var txtsl3 = 'Shape 🔬:';
+
+//OPTIONS FOR THE 2ND LIST TRIGGERED BY THE 1ST-LIST//
+SList.slist2 = {
+"capsule": ['white', 'blue', 'red'],
+ "tablet": ['white', 'blue', 'red'],
+ "caplet": ['white', 'blue', 'red']
+};
+
+//OPTIONS FOR THE 3RD LIST TRIGGERED BY THE 2ND-LIST//
+SList.slist3 = {
+ "white": ['oblong', 'round'],
+ "blue": ['ooblong', 'rectangular'],
+ "red": ['oval', 'triangular'],
+};
+
+//OPTIONS FOR THE PILL-IMAGES LIST TRIGGERED BY THE 3RD-LIST//
+SList.scontent = {
+"oblong": '<img src="https://res.cloudinary.com/dhqsixgmo/image/upload/v1665539675/white-cap.jpg"></img>',
+"round": '<img src="https://res.cloudinary.com/dhqsixgmo/image/upload/v1664851514/pill-git-it-images/white-tab_m8srwd.jpg"></img>',
+ "ooblong": '<img src="https://res.cloudinary.com/dhqsixgmo/image/upload/v1665536622/blue-caplt.jpg"></img>',
+ "rectangular": '<img src="https://res.cloudinary.com/dhqsixgmo/image/upload/v1665537008/rect-tab.jpg"></img>',
+ "oval": '<img src="https://res.cloudinary.com/dhqsixgmo/image/upload/v1665536898/red-cap.jpg"></img>',
+ "triangular": '<img src="https://res.cloudinary.com/dhqsixgmo/image/upload/v1665562544/FOR14100.jpg"></img>',
+};
+
+//RETRIEVE DROPDOWN LIST CONTENT OR IMAGE --> STAYS EMPTY UNTIL COMBINATION OF CHOICES ARE REACHED FOR IMAGE//
+SList.getSelect = function(slist, option) {
+ document.getElementById('scontent').innerHTML = '';
+
+ if(SList[slist][option]) {
+ //IF SELECTIONS ARE COMPLETE --> PILL IMAGE WILL DISPLAY//
+ if(slist == 'scontent') document.getElementById('scontent').innerHTML = SList[slist][option];
+ else {
+ var addata = '<option>- - -</option>';
+ for(var i=0; i<SList[slist][option].length; i++) {
+ addata += '<option value="'+SList[slist][option][i]+'">'+SList[slist][option][i]+'</option>';
+ }
+
+//COMBINATIONS FOR THE OPTIONS SELECTED W/IN THE 3-LISTS//
+ switch(slist) {
+ case 'slist2':
+ document.getElementById('slist2').innerHTML = txtsl2+' <select name="slist2" onchange="SList.getSelect(\'slist3\', this.value);">'+addata+'</select>';
+ document.getElementById('slist3').innerHTML = '';
+ break;
+ case 'slist3':
+ document.getElementById('slist3').innerHTML = txtsl3+' <select name="slist3" onchange="SList.getSelect(\'scontent\', this.value);">'+addata+'</select>';
+ break;
+ }
+ }
+ }
+ else {
+ //EMPTY TAGS FOR THE LISTS TO POPULATE --> CHOICES//
+ if(slist == 'slist2') {
+ document.getElementById('slist2').innerHTML = '';
+ document.getElementById('slist3').innerHTML = '';
+ }
+ else if(slist == 'slist3') {
+ document.getElementById('slist3').innerHTML = '';
+ }
+ }
+}
 //EVENT LISTENERS//
 document
   .querySelector(".comment-submit")

@@ -8,16 +8,44 @@
   border: 1px solid black;
 }
 
+#is-divider {
+border: 1.5px solid black;
+border-radius: 0.5em;
+}
+
 .hero {
   background-image: linear-gradient(rgb(169, 186, 247) 0%, rgb(6, 6, 195) 100%);
   border-radius: 0.5em;
   padding-top: 2%;
-  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+  box-shadow: 8px 0 0 5px rgb(2, 2, 177), 0 0 0 0 rgb(2, 2, 188);
+  padding-bottom: 3%;
+}
+
+#map {
+  background-image: linear-gradient(rgb(3, 37, 160) 0%, rgb(134, 134, 248) 100%);
 }
 
 #photo_Url {
   border: 1px solid black;
   border-radius: 0.25em;
+}
+
+#post-image {
+  border: 1.25px solid black;
+  width: 50%;
+  margin-left: 25%;
+}
+
+#card {
+  width: 85%;
+}
+
+#card-body {
+  border: 2px solid black;
+  margin-left: 25%;
+  margin-right: 25%;
+  margin-top: 2%;
+  border-radius: 0.5em;
 }
 
 #inline_container {
@@ -113,7 +141,6 @@ h6 {
 .custom__image-container {
   display: flex;
   flex-wrap: wrap;
-  gap: 0.5rem;
   justify-content: center;
 }
 
@@ -151,9 +178,9 @@ html {
 }
 
 #homelogo {
-  border-radius: 1em; 
+  border-radius: 7em; 
   border: 2px solid black; 
-  width: 35%;
+  width: 40%;
   box-shadow: 0 3px 5px 0 rgb(52, 52, 54), 0 5px 5px 0 rgb(45, 45, 46);
 }
 
@@ -181,6 +208,10 @@ html {
   border-radius: 0.5em;
   border: 1px solid black;
   margin-bottom: 2.5%;
+}
+
+#box {
+  box-shadow: 0 8px 5px 0 rgb(2, 2, 130), 0 5px 5px 0 rgb(1, 1, 82);
 }
 
 #navbarMenu {
@@ -232,13 +263,16 @@ transition: all 0.3s ease-in-out;
 
 #dash-box {
   width: 100%;
+  margin-top: 2%;
+  margin-bottom: 2%;
+  box-shadow: 0 8px 5px 0 rgb(2, 2, 130), 0 5px 5px 0 rgb(1, 1, 82);
 }
 
 #dash-table {
   text-align: center;
   font-size: 115%;
   font-weight: bold;
-  border-bottom: 1px dashed black;
+  border-bottom: 1px solid black;
 }
 
 #table-head {
@@ -251,13 +285,13 @@ transition: all 0.3s ease-in-out;
 #table-row {
   text-align: center;
   font-weight: bold;
-  border-bottom: 1px dashed black;
-  border-right: 1px dashed black;
-  border-left: 1px dashed black;
+  border-bottom: 1px solid black;
+  border-right: 1px solid black;
+  border-left: 1px solid black;
 }
 
 td {
-  border-left: 1px dashed black;
+  border-left: 1px solid black;
 }
 
 #delete:hover {
@@ -277,7 +311,7 @@ td {
 }
 
 .table-created {
-  width: 25%;
+  width: auto;
 }
 
 .table-author {
@@ -289,7 +323,7 @@ td {
 }
 
 .table-delete {
-  width: 12%;
+  width: 10%;
 }
 
 #edit-submit {
@@ -361,11 +395,29 @@ td {
   text-decoration: none;
 }
 
+#pill-match {
+  font-size: 115%;
+  text-align: center;
+  margin-top: 2%; 
+  margin-bottom: 2%; 
+  border: solid 1.5px whitesmoke;
+  background-image: linear-gradient(rgb(126, 153, 251) 0%, rgb(6, 6, 129) 100%);
+}
+
+#pill-head {
+  font-size: 125%;
+  color: whitesmoke;
+  font-weight: bold;
+  margin-top: 2%;
+  margin-bottom: 1%;
+  border-bottom: solid 1px whitesmoke;
+}
+
 #footer {
   border-top: 1px solid black;
   height: 20%;
   font-size: 125%;
   border-radius: 0.5em;
   background-image: linear-gradient(rgb(114, 115, 120) 0%, rgb(206, 206, 216) 100%);
-  box-shadow: 8px 0 0 5px rgb(2, 2, 130), 5px 0 3px 0 rgb(1, 1, 82);
+  box-shadow: 8px 0 0 5px rgb(57, 57, 59), 0 0 0 0 rgb(51, 51, 53);
 }

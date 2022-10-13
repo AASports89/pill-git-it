@@ -1,81 +1,79 @@
 {{!-- ***************************************************** USER EDITING A SINGLE POST VIEW *************************************************** --}}
 <section class="hero has-background-grey-lighter">
     <div class="hero-body">
-        <div class="container">
+        <label class="label is-large" for="" style="font-size: 200%; text-align: center; border-bottom: 2px solid whitesmoke; color: whitesmoke" class="label">Edit Pill Data ✍️</label>
+        <div class="container" style="padding-top: 2%; padding-bottom: 2%">
             <div class="columns is-centered">
                 <div class="column">
-                    <form action="" class="box">
-                        <label class="label is-large" for="" class="label">Edit Pill Data ✍️</label>
+                    <form action="" id="box" class="box">
+                        
+                                     <label style="font-size: 150%; text-align: center; padding-top: 2.5%; border-bottom: solid 1px black" for="" class="label">Content 🗄️</label>
                         <div class="field">
-                            <label for="" class="label">Pill Data 💊</label>
+                            <label for="" style="font-size: 125%" class="label">Pill Name/Dose 💊</label>
                             <div class="control">
                                 <input type="text" class="input subject-input" value="{{postData.title}}" required/>
                             </div>
-                            <div class="column is-5">
-               <div class="card">
-            <div class="card-body">
-                <ul class="has-text-dark">
-                    <p>Type: {{postData.type}}</p>
-                    <p>Color: {{postData.color}}</p>
-                    <p>Imprint: {{postData.imprint}}</p>
-                    <p>Shape: {{postData.shape}}</p>
-                </ul>
+                <div class="col" style="margin-top: 3%">
+                    <div class="card-img-top">
+                         <img id="post-image" src="{{postData.photo_Url}}">
+                    </div>
+                        <div id="card-body" class="card-body">
+                            <ul id="body">
+                                <p>Type: {{postData.type}}</p>
+                                <p>Color: {{postData.color}}</p>
+                                <p>Imprint: {{postData.imprint}}</p>
+                                <p>Shape: {{postData.shape}}</p>
+                            </ul>
+                        </div>
+                    </div>
                 </div>
-            </div>
-        </div>
-          <div class="field-body">
-                <div class="field">
-                    <label style="font-size: 150%; text-align: center; padding-top: 2.5%; border-bottom: solid 1px black" for="" class="label">Content 🗄️</label>
-                    <div class="control" style="padding-top: 2.5%">
-                    <div style="margin-bottom: 5%" class="card-img-top">
-                         <img id="sum-img" style="border: dashed 1px black" id="photo_Url" src="{{postData.photo_Url}}">
-            </div>
   <div id="inline_container"></div>
-    </div>
 {{!------------------------------------ DROP-DOWN MENUS FOR TYPE, COLOR, IMPRINT & SHAPE ------------------------------}}
-        <div class="row">
-        <div class="col">
-            <div style="padding: 2%" class="form-group dropdown">
-                <label style="font-weight: bold; color: black; font-size: 115%" for="type" value="">Type 🧪:</label>
-                <select style="font-size: 110%" class="form-control" id="type-input" name="type">
-                    <option>select...</option>
-                    <option>capsule</option>
-                    <option>tablet</option>
-                    <option>caplet</option>
-                    <option>gelcap</option>
-                </select>
-                </select>
+        <div class="container" id="container">
+ <div class="row content-input" style="width: 100%">
+            <div class="col-3">
+                    <label style="font-weight: bold; color: black; font-size: 100%" for="type" value="">Type 🧪:</label>
+                        <select style="font-size: 110%" class="form-control" id="type-input" name="type">
+                            <option>select...</option>
+                            <option>capsule</option>
+                            <option>tablet</option>
+                            <option>caplet</option>
+                            <option>gelcap</option>
+                        </select>
             </div>
-        </div>
-            <div style="padding: 2%" class="form-group dropdown">
-                <label style="font-weight: bold; color: black; font-size: 115%" for="color" value="">Color 🩸:</label>
+            <div class="col-3">
+                <label style="font-weight: bold; color: black; font-size: 100%" for="color" value="">Color 🩸:</label>
                 <select style="font-size: 110%" class="form-control" id="color-input" name="color">
-                    <option>select...</option>
+                   <option>select...</option>
                     <option>white</option>
                     <option>blue</option>
+                    <option>clear</option>
                     <option>yellow</option>
+                    <option>green</option>
                     <option>red</option>
                     <option>pink</option>
                     <option>orange</option>
                 </select>
             </div>
-              <div style="padding: 2%" class="form-group dropdown">
-                <label style="padding-bottom: 1%; font-weight: bold; color: black; font-size: 115%" for="imprint" value="">Imprint 🖨️:</label>
-                    <textarea style="font-size: 100%" name="imprint" id="imprint-input" width="10%" placeholder="Enter pill imprint here..."></textarea>
-        </input>
+            <div class="col-3">
+                    <label style="font-weight: bold; color: black; font-size: 100%" for="shape" value="">Shape 🔬:</label>
+                        <select style="font-size: 110%" class="form-control" id="description-input" name="shape">
+                             <option>select...</option>
+                            <option>round</option>
+                            <option>oblong</option>
+                            <option>oval</option>
+                            <option>rectangular</option>
+                            <option>triangular</option>
+                            <option>square</option>
+                        </select>
+            </div>
+            <div class="col-3">
+                <label style="font-weight: bold; color: black; font-size: 100%" for="imprint" value="">Imprint 🖨️:</label>
+                <textarea style="font-size: 100%" name="imprint" id="imprint-input" placeholder="Enter pill imprint here..."></textarea>
+                </input>
+            </div>
         </div>
-            </div>
-     <div class="form-group dropdown">
-                  <label style="font-weight: bold; color: black; font-size: 115%" for="shape" value="">Shape 🔬:</label>
-                <select style="font-size: 110%" class="form-control" id="description-input" name="shape">
-                    <option>select...</option>
-                    <option>round</option>
-                    <option>oblong</option>
-                    <option>oval</option>
-                    <option>rectangular</option>
-                    <option>triangular</option>
-                </select>
-            </div>
+        </div>
         <div class="field is-grouped is-grouped-right mt-3">
                 <button id="edit-submit" class="button is-success edit-submit">
                     Submit 📬
@@ -88,4 +86,4 @@
     </div>
 <div class="current-post-id is-invisible">{{postData.id}}</div>
 </section>
- <script src="/js/edit.js"></script>
+ <script src="/js/user-edit.js"></script>

@@ -1,25 +1,23 @@
 {{!------------------------------------ HOMEPAGE IMAGE ---------------------------------------}}
-        <div class="columns is-centered">
-          <div class="column is-8 is-offset-5">
-            <div class="card-img-top"></div>
-              <img id="homelogo" src="https://res.cloudinary.com/dhqsixgmo/image/upload/v1665551883/pill-git-it-images/pill-git-title_cpksby.png"/>
-            </div>
-          </div>
-        </div>
+<div class="columns is-centered">
+  <div class="column is-8 is-offset-5">
+    <div class="card-img-top"></div>
+      <img id="homelogo" src="https://res.cloudinary.com/dhqsixgmo/image/upload/v1665603894/pill-git-it-images/pill-homep_nrjkix.jpg"/>
+    </div>
+  </div>
+</div>
 {{!--------------------------- HOMEPAGE SUMMARY SECTION W/ ALL USER POST DATA & IMAGES -----------------------------------}}
 <section class="hero">
   <div class="hero-body">
     <div class="container">
-      <section class="section">
-        <div class="columns">
-          <div class="column is-8 is-offset-2" style="padding-top: 5%">
-            <div class="card" style="width: 100%; padding-top: 3%; text-align: center">
-                
+          <div class="columns is-8">
+          <div class="column is-5 is-offset-1" style="padding-top: 3%; padding-bottom: 3%">
+            <div id="card" class="card" style="padding-top: 3%; text-align: center">
                 <h1 id="sum"><a id="sum" href="/post/{{posts.0.0.id}}">{{posts.0.0.title}}</a></h1>
                 <h2 id="h2" class="subtitle is-4">{{format_date posts.0.0.createdAt}}</h2>
                 <h6>By: {{posts.0.0.user.username}}</h6>
                 <img id="photo_Url" src="{{posts.0.0.photo_Url}}">
-                <div class="card-body">
+              <div class="card-body">
                 <ul id="body">
                   <p class="card-text"><strong>Type:</strong> {{posts.0.0.type}}</p>
                   <p class="card-text"><strong>Color:</strong> {{posts.0.0.color}}</p>
@@ -28,16 +26,32 @@
                 </ul>
               </div>
           </div>
+          </div>
+           <div class="column is-5 is-offset-1" style="padding-top: 3%; padding-bottom: 3%">
+              <div id="card" class="card" style="padding-top: 3%; text-align: center">
+                <h1 id="sum"><a id="sum" href="/post/{{posts.1.1.id}}">{{posts.1.1.title}}</a></h1>
+                <h2 id="h2" class="subtitle is-4">{{format_date posts.1.1.createdAt}}</h2>
+                <h6>By: {{posts.1.1.user.username}}</h6>
+                <img id="photo_Url" src="{{posts.1.1.photo_Url}}">
+                <div class="card-body">
+                <ul id="body">
+                  <p class="card-text"><strong>Type:</strong> {{posts.1.1.type}}</p>
+                  <p class="card-text"><strong>Color:</strong> {{posts.1.1.color}}</p>
+                  <p class="card-text"><strong>Imprint:</strong> {{posts.1.1.imprint}}</p>
+                  <p class="card-text"><strong>Shape:</strong> {{posts.1.1.shape}}</p>
+                </ul>
+              </div>
+            </div>
+            </div>
+          </div>
         </div>
-      </div>
-    </section>
-{{!------------------------------------ *END* POST SPACE *END* ----------------------------------}}
-        <div class="is-divider"></div>
-      </div>
-    </div>
+  </div>
   </section>
+{{!------------------------------------ *END* POST SPACE *END* ----------------------------------}}
+<div id="is-divider" class="is-divider"></div>
+     
   {{!--------------------------------------------- POST MAP ----------------------------------------------}}
-  <section class="hero ">
+  <section id="map" class="hero">
     <div class="hero-body-neg">
       <div class="container">
         {{#each posts as |post|}}
